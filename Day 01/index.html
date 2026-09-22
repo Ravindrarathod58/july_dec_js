@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    
+            Introduction to JS
+
+
+            programming /                              scripting 
+
+            compiled / compiled / interpreted        interpreted
+
+            What is JS?
+                it is scripting / programming to build the web applications
+                javascript in the web to build the dynamic webpages
+
+                the every browser has its own javascript engine (V8)
+                edge , chrome -> V8
+                safari   javascript core
+                firefox  spidermonkey
+
+            features 
+                1. dynamically typed language
+                        data types are assigned to the variables at the runtime
+
+                2. interepreted language
+                        we dont have to compile the javascript code
+                
+                3. multi paradigm programming language
+                    1. procedural programming
+                    2. Object based language
+                    3. functional language
+                    4. Object oriented programming
+          
+            features to interact with the webpages
+                1. DOM 
+                    object in the javascript that allows to directly communicate with HTML & CSS
+                2. BOM
+                    object which allows to communicate with browser
+                    hardware communication
+
+            JS as programming
+            JS as Scripting
+
+            how to write and excute the javascript programs
+
+            1. using the browser
+                ways of writing the javascript
+                    1. inline javascript
+                            with the help of attributes
+                            1. global attribute -> id, class, title
+                            2. element specific attributes -> href, alt, src, type, name
+                            3. boolean attributes -> required, readonly, disabled
+                            4. event attributes -> onclick onsubmit
+                              the attributes who allows to track the user actions
+
+                    2. internal javascript
+                       with the  script tag we can write the javascript code
+                       the script tag must be always at the bottom of HTML code
+
+                    3. external js
+                        1. create a separate file with the .js extension
+                        2. inside the HTML use the script tag and src attribute to link the javascript and HTML
+                            press the right button of the mouse on the browser screen
+                            select inspect option from the menu
+                            select the console tab
+
+
+
+            2. using node js
+
+                    1. install the node.js
+                    2. verify
+                    3. create a file with .js extension
+                    5. use the command node filename to execute the program
+
+
+
+
+
+        the printing statements in javascript ( input / output )
+
+        output statements 
+            we use the output statement to display the output of the program
+
+            console.log() -> used to display the output on the browsers console
+            console.info() -> used to display the debugging information
+            console.error() -> to display some error information
+            console.table() -> to display the objects( array, object, map , set)
+            document.write() -> displays the output on the browsers screen / window
+
+            use the tags to diaply the output
+                using one property -> innerText
+
+        input methods
+            prompt() -> to take the input from the user
+                    -> always returns the string value
+            using the input tags 
+                    username.value -> the value of the username input field
+
+        popup boxes
+            alert() -> to diaply the general infromation
+            confirm() -> to take the boolean input
+
+
+
+
+
+        Tokens
+
+
+
+        -->
+
+    <!-- 
+        
+            login page
+                username / password 
+            registration
+                the user interaction in the page we cannot say that the page is static
+
+
+        servlets
+
+            request.getParameter("username")
+        -->
+
+    <form action=""></form>
+    <input type="text" name="username" id="username" />
+
+    <h1 id="heading"></h1>
+
+    <button onclick="alert('Hello from javascript')">click me</button>
+    <!-- track the click by the user -->
+    <!-- backend -->
+
+    <script src="script.js"></script>
+    <!-- <script>
+      alert("Hello from internal javascript");
+    </script> -->
+  </body>
+</html>
