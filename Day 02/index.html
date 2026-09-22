@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        1. inline javascript
+            using the event attributes onclick onsubmit
+        2. internal Javascript
+            using script tag
+        3. external javascript
+            script tag with src attribute
+            then create the separate file with .js extension
+
+
+    Tokens in javascript
+        tokens are the basic building block of the programming language
+        the tokens are the smallest unit of the program 
+
+        1. keyword
+            keywords are the meaningful reserved words 
+            let , const, var -> to declare the variables
+            function -> to declare the function
+            class -> to declare the class
+
+        2. identifier
+            identifier is a name given to variables, functions, classes to identify them
+            identifiers are the names given by developers to identify or use the values
+            let name = "Ravindra"
+        3. operators
+            operators are the symbols which is used to perform the operations on operands
+            let sum = 10 + 20;
+                    operand operator operand
+
+        4. literals
+            literals are the  fixed values assigned to variables
+            let num = 10;
+            keyword identifier operators literal
+            string, number, boolean, array, object
+
+        5. punctuators
+            punctuators are the symbols that can be used to declare the blocks or terminate the lines or
+            to take reference of the properties
+            { }, ( ), . , ,
+
+        6. comments
+            comments are the symbols which is used to add the information in code that cannot be executed
+            1. single line comment //
+            2. multi line comment /* */
+
+
+    variables
+        variables are the named memory locations which used to store the values
+        variables are the containers to store the values
+    
+        to declare the variables in javascript we have to use some keywords
+        like let, const, var
+        the javascript is dynamically typed language when declaring the variables we dont have 
+        to specify the datatypes the JS engine itself defines / resolve the data type at runtime
+
+        let name; // variable declaration
+        name = 10;    // initilisation
+        name = "Ravindra" // re assingnment
+
+        const name = "ravindra" // declaration and initialisation
+        the const variables must be initilise at the time of declaration
+        because the const variables values are fixed and cannot be changed
+
+        var name;
+        name = "ravindra";
+
+
+    Diff between the var, let , const
+        var 
+            - the var is function scoped
+            - the var allows the redeclaration in the same scope
+            - the var declaration are hoisted
+                    hoisted means we can call them before declarations
+
+        let
+            - the let is block scoped variable if accessed outside tge block then throws the reference error
+            - the let dont allow to redeclare the variable in same scope if did then throws the syntax error
+            - the let declarations are not hoisted if tried then throws the reference error
+
+        const 
+            - the const variable are the block scoped if accessed outside the block then throws the reference error
+            - the const dont allows to redeclare the same varaibles in same scope
+            - when the varables are declared using the const it must be initialised at the time of declaration if
+                not initialised then throws the syntax error
+            - the const variables cannot be reassigned if tried it throws the type error
+
+
+    How to check the Datatype of the variable?
+        we can use the typeof operator to check the datype of variable
+
+    Strings are the primitive datatypes
+
+
+    Datatypes
+        1. Primitive 
+            primitive values are single and fixed values they immutable means once assigned we cannot modify them
+
+
+            1. Number
+                we can store the integer or float values in the number type
+                it is limited in size 
+                    ex. 10, 10.5, -10, -10.5
+            2. string
+                    sequence of characters
+                    ex. "double quotes", 'single quotes', `backtiks`
+                    strings are immutable we cannot change their values once assigned
+            3. boolean
+                boolean have only two values true and false
+            4. undefined
+                when the variables are declared but ininitialised with any values then the default 
+                value of those variables is undefined
+                this is an empty value by default
+            5. null
+                if intensionally we want to keep the value of any varaible empty them we assign the null
+                and the biggest bug of the javascript
+
+            6. symbol
+                unique values 
+            7. bigInt
+                we can store the large numbers
+
+        2. Non-Primitive
+            1. Object 
+            2. Array
+            3. function
+
+
+
+    
+    -->
+
+    <!-- <button onclick="alert('hello from javascript')">Click me</button> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
