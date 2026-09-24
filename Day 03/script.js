@@ -81,6 +81,8 @@ console.log(`hello i am learning ${language}`);
 
 // String methods
 
+/*
+
 let str = "Hello";
 console.log(str.charAt(0)); // H
 
@@ -99,3 +101,5 @@ console.log(str);
 
 str = str.replaceAll("l", "z");
 console.log(str);
+
+*/

@@ -1,0 +1,396 @@
+Que 1 : Rajesh bought an old TV for $3500. and Rajesh sold the TV for $7000, which includes a 5% VAT and a 10% tax on the selling price. 
+-------  Calculate the net selling price by removing VAT and tax.
+         Determine whether Rajesh made a profit or incurred a loss, and calculate the respective amount.
+
+         Program Requirements:
+
+         The program should read the cost price and the total selling price (including VAT and tax).
+         The program should calculate the net selling price by removing VAT and tax.
+         The program should compare the net selling price with the cost price to determine profit or loss.
+         The program should display the amount of profit or loss.
+
+Sample input  : Enter the cost price of the TV: 3500
+                Enter the selling price of the TV (including VAT and tax): 7000
+Sample output : You made a profit of 1956.52
+
+
+==========================================================================================================
+Que 2 :
+--------
+
+Imagine you are running a small shop selling various items like groceries, stationery, and household products. 
+One day, you decided to sell 100 units of a particular item that you bought in bulk. 
+
+Here is the information you have:
+Cost Price (CP) per unit: ₹50
+Selling Price (SP) per unit: ₹60
+Using the C program provided, calculate the total profit or loss you made from selling all 100 units of the item. 
+Additionally, what would be the outcome if you had to reduce the selling price to ₹45 per unit due to a sudden market drop?
+
+
+Sample input 1:
+
+Enter Cost Price (CP): ₹50
+Enter Selling Price (SP): ₹60
+
+Sample Output : 
+Profit per unit = 10₹
+Total Profit on 100 units = 1000₹
+
+-----------------------------
+
+Sample input 2:
+
+Enter Cost Price (CP): ₹50
+Enter Selling Price (SP): ₹45
+
+Sample Output : 
+Loss per unit = 5₹
+Total Loss on 100 units = 500₹
+
+==========================================================================================================
+
+Que 3:
+--------
+Write a C program for a service center by following given Rules and Guide lines.
+
+
+-> This service center only accepts 2 wheeler ,3 wheeler & 4 wheeler . If any other vehicle 
+
+came to you , you have to show a message that "this service center is not accepting
+
+other than 2 wheeler, 3 wheeler and 4 wheeler".
+
+
+
+-> If the vehicle is 2 ,3 & 4 only then you have to ask the user what is the age of the vehicle.
+
+
+
+-> If the age your vehicle is above 8 months then only accept the service center 
+
+otherwise you have to show a message that "your vehicle servie will done after a while".
+
+
+
+-> If the vehicle age is greater than 8 months then show options to the user on the console.
+
+
+
+Options:
+--------
+
+
+1)Enter 1 for tyre problem
+
+2)Enter 2 for fuel problem
+
+3)Enter 3 for engine issue
+
+4)Enter 4 for general services
+
+
+
+-> If the user enter 1 as input so it is tyre problem statement so you have to show a message "how many tyres you are facing the issue ?", based on the issue on the no of tyres,
+
+generate the bill.
+
+
+
+-> For example tyre cost Rs. 400 , if the user providing 3 tyre then the bill should be
+
+generated as Rs. 1200 in below format.
+
+
+
+Name of the owener
+
+Name of the bike
+
+Issue
+
+Bill
+
+
+
+-> For fuels problem cost is Rs.1500
+
+-> For engine issue cost is Rs.5000
+
+-> For general servicing cost is Rs.1000
+
+
+
+And generate the bill in the above format.
+
+
+
+
+
+==========================================================================================================
+
+Que 4:
+--------
+Write a C program to determine whether a person is eligible to get married in India or not, based on their age, gender, and nationality.
+	
+	-->The program should read three inputs from the user:
+
+	1. Age of the person
+	2. Gender of the person (Male/Female)
+	3. Nationality of the person (for Indian 'i' or 'I')
+	
+	-->The program should first check the nationality of the person. If the person is not an Indian citizen, the program should print "You are not an Indian citizen, cannot get married in India"
+
+	-->If the person is an Indian citizen, the program should then check their age and gender to determine if they are eligible to get married.
+
+	- If the person is a male, they must be at least 21 years old to get married.
+	- If the person is a female, they must be at least 18 years old to get married.
+	
+	-->Eligible to get married in India" if the person meets all the criteria (age, gender, and nationality)
+- "Not eligible to get married in India" if the person does not meet the age or gender criteria
+
+case 1:
+	
+input :
+	Enter your age: 28
+	Enter your gender (M/F): m
+	Enter your nationality (i or I  for Indian): I
+output:
+	Eligible to get married in India
+
+case 2:
+
+input :
+	Enter your age: 28
+	Enter your gender (M/F): m
+	Enter your nationality (i or I  for Indian): c
+output:
+	You are not an Indian citizen
+
+
+
+
+
+
+==========================================================================================================
+Que :5
+-------
+  Write a C program to calculate the total bill for a customer based on the type of tea and the number of cups ordered.
+
+1. The program should display a menu to the customer with the available tea options and their prices.
+2. The program should ask the customer to enter their choice of tea from the menu.
+3. The program should ask the customer to enter the number of cups they want to order.
+4. Based on the type of tea and the number of cups ordered, the program should calculate the total bill.
+5. The program should display the total bill to the customer.
+
+
+case 1 :
+input :
+	Tea Menu:
+	1. Masala Tea - Rs. 10 per cup
+	2. Ginger Tea - Rs. 15 per cup
+	3. Lemon Tea - Rs. 20 per cup
+	Enter your choice (1/2/3): 2
+
+	Enter the number of cups: 3
+output :
+	Total bill: Rs. 45.00
+
+case 2 :
+input :
+	Tea Menu:
+	1. Masala Tea - Rs. 10 per cup
+	2. Ginger Tea - Rs. 15 per cup
+	3. Lemon Tea - Rs. 20 per cup
+	Enter your choice (1/2/3): 3
+
+	Enter the number of cups: 2
+output :
+	Total bill: Rs. 40.00
+
+case 3 :
+input :
+	Tea Menu:
+	1. Masala Tea - Rs. 10 per cup
+	2. Ginger Tea - Rs. 15 per cup
+	3. Lemon Tea - Rs. 20 per cup
+	Enter your choice (1/2/3): 4
+
+	Enter the number of cups: 2
+output :
+	Invalid Choice please enter valid option.
+
+
+==========================================================================================================
+Que :6
+-------
+
+You are developing a ticket pricing system for a theme park. Write a program that takes the following inputs from a customer:
+
+
+
+Age (integer)
+
+Height in centimeters (float)
+
+Whether the customer has a VIP pass (y or n)
+
+The program should calculate the ticket price based on the following rules:
+
+
+
+Children under 3 years old (inclusive) get in for free.
+
+Children aged 4 to 12 (inclusive) pay Rs.20.
+
+Adults aged 13 to 64 (inclusive) pay Rs.100.
+
+Seniors aged 65 and above pay Rs.50.
+
+However, there are some additional considerations based on height:
+
+
+
+If the customer is above 180 cm in height, they pay an extra 50.
+
+If the customer is between 120 cm (inclusive) and 180 cm (inclusive), no additional charge applies.
+
+If the customer is below 120 cm, they receive a 50% discount on the base ticket price.
+
+If the customer has a VIP pass, they get a 10% discount on the final ticket price.
+
+
+
+Write a program that implements these pricing rules and provides the following output:
+
+
+
+The customer's age, height, and VIP pass status.
+
+The calculated base ticket price before any discounts or additional charges.
+
+Any discounts or additional charges applied based on height.
+
+The final ticket price after applying all discounts and charges.
+
+Additionally, if the customer's age is below 0 or height is negative, the program should provide an error message.
+
+===================================================================================================================================
+Que 7 :
+--------
+
+
+Title: Interactive Tea Stall Experience
+
+
+
+Introduction:
+
+Imagine strolling down a charming street, enticed by the inviting aroma of freshly brewed beverages.
+
+You arrive at a cozy tea stall, greeted by a friendly attendant. Prepare for an interactive journey through the Tea Stall Counter!
+
+
+
+Scenario:
+
+
+
+Welcome and Menu:
+
+You enter the tea stall, warmly welcomed by the attendant:
+
+
+
+Attendant: "Welcome to our Tea Stall Counter! Our menu:"
+
+
+
+Tea --------------------- Rs. 10
+
+Coffee ------------------ Rs. 20
+
+Cold coffee ------------- Rs. 50
+
+Exit
+
+Attendant: "Choose by entering a number (1-4):"
+
+
+
+[User enters choice]
+
+
+
+Customize Order:
+
+Based on your choice, the attendant guides you:
+
+
+
+[If choice is 1:]
+
+Attendant: "How many cups of refreshing tea?"
+
+
+
+[If choice is 2:]
+
+Attendant: "How many cups of aromatic coffee?"
+
+
+
+[If choice is 3:]
+
+Attendant: "How many cups of chilled cold coffee?"
+
+
+
+[User enters quantity]
+
+Total and Payment:
+
+The attendant shares your order total and awaits payment:
+
+
+
+Attendant: "Total for [quantity] cup(s): Rs. [total_price]."
+
+
+
+Attendant: "Enter your payment amount: Rs."
+
+
+
+[User enters amount_paid]
+
+
+
+Attendant: "Change: Rs. [change]."
+
+
+
+Continuation or Farewell:
+
+Choose to explore more or conclude your visit:
+
+
+
+Attendant: "Explore more or finalize? (Type 'Y' for Yes or 'N' for No):"
+
+
+
+[User enters order_again]
+
+
+
+[If user wants to continue:]
+
+Attendant: "Certainly, let's explore."
+
+
+
+[If user doesn't want to continue:]
+
+Attendant: "Thank you for visiting! We look forward to serving you again soon!"
+
