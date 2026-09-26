@@ -1,0 +1,124 @@
+Que 1 :
+--------
+Write a C program to find  Armstrong numbers  of given  integer using while loop.
+The program should read  one number from the user and display Armstrong numbers in function. 
+
+
+-> An Armstrong number (also known as a Narcissistic number or Pluperfect Digital Invariant) is a number that
+    is equal to the sum of its own digits each raised to the power of the number of digits.
+-> example1 : 153 => 1^3 + 5^3 + 3^3 => 153
+-> example2 : 1634 => 1^4 + 6^4 + 3^4 + 4^4 => 1634
+
+case 1:
+Sample input : 
+	Enter a number : 153
+Sample output : 
+		153 is Armstrong numbers 
+
+case 2:
+Sample input : 
+	Enter a number : 1634
+Sample output : 
+		1634 is Armstrong numbers
+
+case 3:
+Sample input : 
+	Enter a number : 234
+Sample output : 
+		234 is not Armstrong numbers 
+
+=========================================================================================
+
+Que 2 :
+=======
+
+Write a C program to find  Strong numbers . 
+The program should read one number from the user and display  Strong numbers. 
+
+A strong number is a number whose sum of the factorial of each digit is equal to the original number.
+For example:
+145 is a strong number because 1!+4!+5! = 145 (1+24+120) = 145
+
+
+case 1:
+Sample input  :	
+		Enter a number : 145
+Sample output :
+		145 is strong number
+
+case 2:
+Sample input  :	
+		Enter a number : 345
+Sample output :
+		345 is not strong number
+=========================================================================================
+
+Que 3 :
+=======
+ Write C program to check given number is automorphic number or not 
+
+Automorphic number :
+An automorphic number is a number whose square ends in the
+same digits as the number itself.
+
+For example:
+5,6,25 are automorphic numbers.
+5*5=25 // last digit is 5
+6*6=36 // last digit is 6
+25*25=625 // last digit is 25
+
+Sample input  : 5
+Sample output : 5 is automorphic number.
+
+Sample input  : 7
+Sample output : 7 is not automorphic number.
+
+=========================================================================================
+
+Que 4 :
+=======
+Write C program to check given number is Disarium Number or not.
+
+Disarium Number :
+A number is a Disarium number if the sum of the digits powered with their respective positions is equal to the number itself.
+For example:
+
+Sample input  : 89
+Sample output : 89 is a Disarium number.
+Explanation   : 89:> 8^1 + 9^2 = 89
+
+Sample input  : 175
+Sample output : 
+Explanation   : 175:> 1^1 + 7^2 + 5^3 = 175
+
+Sample input  : 45
+Sample output : 45 is NOT a Disarium number
+Explanation   : 45:> 4^1 + 5^2 = 29
+==================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
