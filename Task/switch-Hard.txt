@@ -1,0 +1,158 @@
+Que 1:
+-------
+
+Develop below program using switch case)
+
+Write a C program that will read a float and a character from console. The character could be d for deposit or w for withdrawal.
+
+Starting with a Minimum balance of 2000.
+
+
+
+*Ask the user to initialize the minimum balance and don't allow 0 and -ve values if it is 0 or -ve then print "Ammount Can't be stored".
+
+
+
+*If the user want deposit operation then ask how much ammount he want to deposit and add that ammount
+
+ with balance and print the balance.
+
+*if the user want withdrwal operation then ask how much ammount he want to withdrwal and substract that 
+
+ ammount from the balance and print the balance.
+
+
+
+[Note: If the deposit ammount is negetive or 0 print "Invalid ammount".
+
+    If the withdrawl ammount is negetive , 0 or greater than balance then print "Invalid ammount"]
+
+
+
+Hints:
+
+-------
+
+Declare variables for the amount in float, balance in float and transaction code in char types.
+
+
+
+Test the transaction code, if ‘d’ it is deposit. Test the ammount so that it is not negative.
+
+If the balance is not negative or positive sum-up
+
+the balance.
+
+balance = balance + amount;
+
+Test the transaction code for withdrawal, ‘w’. If the transaction code is ‘w’
+
+Minus the withdrawn amount to update the
+
+balance.
+
+balance = balance - amount;
+
+And print the balance.
+
+===================================================================================================================
+Que 2 :
+--------
+Salary and Tax Calculation Based on Designation and Allowances Using Switch Case
+
+Write a C program that takes the designation and base salary of an employee, calculates the total salary by adding the respective allowances, and then calculates the tax based on the total salary.
+
+The program should follow these rules:
+
+There are 3 types of designations:
+
+Developer (indicated by D or d)
+Trainer (indicated by T or t)
+Manager (indicated by M or m)
+For Invalid input, print the message "Invalid input".
+
+3 types of allowances:
+
+Home Allowance = 10000
+Food Allowance = 3000
+Travel Allowance = 10000
+Salary Calculation Rules:
+Developer: Total Salary = Salary + Home Allowance
+Trainer: Total Salary = Salary + Home Allowance + Food Allowance
+Manager: Total Salary = Salary + Home Allowance + Food Allowance + Travel Allowance
+Tax Calculation:
+If the total salary is greater than 40000, tax will be 10% of the total salary.
+If the total salary is 40000 or less, tax will be 5% of the total salary.
+
+Sample Input 1:
+	Enter Designation (D/d for Developer, T/t for Trainer, M/m for Manager): D
+	Enter Salary: 30000
+Sample Output 1:
+	Total Salary: 40000
+	Tax: 5% = 2000
+
+==========================================================================================================================
+Que 3:
+------
+[Solve Using Switch-case & Goto Statment]
+
+You are required to write a C program that allows the user to control the state of a light and an air conditioner (AC). 
+The program should present the following menu options to the user:
+
+	1)Turn ON the Light.
+	2)Turn OFF the Light.
+	3)Turn ON the AC.
+	4)Turn OFF the AC.
+Based on the user's choice, the program should display the corresponding action message:
+
+If the user selects option 1, display "Light is now ON."
+If the user selects option 2, display "Light is now OFF."
+If the user selects option 3, display "AC is now ON."
+If the user selects option 4, display "AC is now OFF."
+The program should also handle invalid input:
+
+If the user enters a number outside the range of 1 to 4, display an error message indicating "Invalid choice! Please enter 1, 2, 3 or 4."
+The program should allow the user to retry entering a valid option by using the (goto statement).
+
+Example_1:
+-----------
+
+Select an option:
+1. Turn ON the Light
+2. Turn OFF the Light
+3. Turn ON the AC
+4. Turn OFF the AC
+Enter your choice: 1
+Light is now ON.
+
+Example_2:
+-----------
+
+Select an option:
+1. Turn ON the Light
+2. Turn OFF the Light
+3. Turn ON the AC
+4. Turn OFF the AC
+Enter your choice: 4
+AC is now OFF.
+
+
+Example_3:
+-----------
+
+Select an option:
+1. Turn ON the Light
+2. Turn OFF the Light
+3. Turn ON the AC
+4. Turn OFF the AC
+Enter your choice: 5
+
+Invalid choice! Please enter 1, 2, 3, or 4.
+Select an option:
+1. Turn ON the Light
+2. Turn OFF the Light
+3. Turn ON the AC
+4. Turn OFF the AC
+Enter your choice: 2
+Turn OFF the Light
+

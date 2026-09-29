@@ -1,0 +1,139 @@
+Que 1:
+-------
+Write a C program that takes a number between 1 and 7 as input and prints the corresponding day of the week using a switch statement.
+
+Sample Input:
+	Enter a number : 3
+Sample Output:
+	Tuesday
+
+===================================================================================================================
+Que 2:
+-------
+Write a C program that takes a student's grade (as a number between 0 and 100) as input and prints the corresponding grade (A, B, C, D, or F) using a switch statement.
+Grading Criteria
+Grade A: For scores between 90 and 100 (inclusive).
+Grade B: For scores between 80 and 89 (inclusive).
+Grade C: For scores between 70 and 79 (inclusive).
+Grade D: For scores between 60 and 69 (inclusive).
+Grade F: For scores below 60.
+Sample Input:
+	Enter Student Percentage : 85
+Sample Output:
+	Grade: B
+
+
+===================================================================================================================
+Que 3:
+-------
+Write a C program that takes two numbers and an operator (+, -, *, /) from the user and performs the corresponding arithmetic operation using a switch statement.
+
+Sample Input:
+	Enter first number: 12
+	Enter second number: 8
+	Enter operator: +
+Sample Output:
+	Result: 20
+
+
+===================================================================================================================
+Que 4:
+-------
+Write a C program that takes a character as input and checks if it is a vowel or a consonant using a switch statement. If the character is not a letter, print an appropriate message.
+
+Sample Input:
+	Enter a character: a
+Sample Output:
+	Vowel
+
+
+===================================================================================================================
+Que 5:
+-------
+Write a C program that displays a menu with the following options:
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+The program should perform the selected operation using a switch statement and continue until the user selects "Exit".
+
+Sample Input:
+	Select an option: 1
+	Enter first number: 10
+	Enter second number: 5
+Sample Output:
+	Result: 15
+===================================================================================================================
+Que 6:
+-------
+Write a C program that takes a number between 1 and 10 and prints its corresponding word (e.g., "1" becomes "One", "2" becomes "Two", etc.) using a switch statement.
+
+Sample Input:
+	Enter a number between 1 and 10: 3
+Sample Output:
+	Three
+
+
+===================================================================================================================
+Que 7:
+-------
+Write a C program that checks the input value and prints the corresponding month name. Use a switch statement to print the name of the month when the number is between 1 and 12. For example, if input is 5, it should print "May".
+
+Sample Input:
+	Enter month number (1 to 12): 5
+Sample Output:
+	May
+
+
+===================================================================================================================
+Que 8:
+-------
+Write a C program that will ask for a person’s name and his/her game score. Then it will ask for a second person’s name and score. The program will print the winner’s name and also print by how many 
+
+points that person won by comparing the scores. Develop this program by using switch case.
+
+input :
+	Enter First player Name : Vaibhav
+	Enter First player score : 50
+	Enter Second player Name : Rohit
+	Enter Second player score : 70
+output :
+	Rohit won the match by 20 points.
+
+===================================================================================================================
+Que 9:
+-------
+Write a C program to accept id from user and display department.
+
+ 11 to 15 is Software department
+
+  16 to 20 is Developer department
+
+  21 to 23 is Management department
+
+input :
+	Enter id : 12
+output :
+	Software department
+
+===================================================================================================================
+Que 10:
+-------
+Write a C program to check the number is even or odd by using Switch Case.
+
+Input :
+	Enter a number : 5 
+output :
+	Odd
+
+=================================================================================================================
+Que 11:
+-------
+	Write a C program to find the maximum between two numbers using Switch statement.
+Input :
+	Enter two number : 5 9
+output :
+	9 is max
+
