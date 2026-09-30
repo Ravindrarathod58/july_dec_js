@@ -1,0 +1,57 @@
+Ques 1. Simple Function Declaration 
+Goal: Understand the basic syntax of declaring and calling a named function.
+Instructions:
+1.	Declare a function named greetUser.
+2.	Inside the function, print the message: "Hello, welcome to the JavaScript world!".
+3.	Call the greetUser function once.
+Expected Output:
+Hello, welcome to the JavaScript world!
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 2. Function for Squaring a Number
+Goal: Define a function tha performs a calculation.
+Instructions:
+1.	Declare a function named squareNumber and declare the variable num inside the function.
+2.	calculate the square of the number (num * num).
+3.	Print the result, prefixed with: "The square is: ".
+4.	Call the function.
+
+sample input: num = 7
+Expected Output:
+The square is: The square is: 49
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ques 3. Function for Area Calculation
+Goal: Define a function that calculates the area of rectangle.
+Instructions:
+1.	Declare a function named calculateRectangleArea and declare two variables: length and width.
+2.	Inside the function, calculate the area (length * width).
+3.	Print the result, formatted as: "A rectangle of 5x10 has an area of 50.".
+4.	Call the function with length = 5 and width = 10.
+Expected Output:
+A rectangle of 5x10 has an area of 50.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 4. Function for Voter Eligibility check
+Goal: Combine function structure with conditional statements.
+Instructions:
+1.	Declare a function named checkVoterEligibility  and declare one variable named : age.
+2.	Inside the function, use an if-else statement:
+o	If age >= 18, print "Eligible to vote.".
+o	Otherwise, print "Not yet eligible to vote.".
+3.	Call the function twice: once with age = 20 and once with age = 16.
+Expected Output:
+Eligible to vote.
+Not yet eligible to vote.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ques 5. Function for Factorial Calculation
+Goal: Use a loop structure inside a function to perform an iterative calculation.
+Instructions:
+1.	Declare a function named calculateFactorial and declare a variable: n.
+2.	Inside the function, use a for loop to calculate the factorial of $n$ ($n!$). (Assume $n \ge 1$. Example: $4! = 4 \times 3 \times 2 \times 1 = 24$).
+3.	Store the result in a let variable : result.
+4.	Call the function with n = 5 and print the value.
+Expected Output:
+120
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------

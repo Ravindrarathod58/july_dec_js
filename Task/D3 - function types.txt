@@ -1,0 +1,63 @@
+Ques 1. Basic Function Expression Syntax
+Goal: Understand the fundamental syntax for creating a function expression and calling it.
+Instructions:
+1.	Declare a const variable named calculateSquare.
+2.	Assign an anonymous function to this variable that accepts one parameter: num.
+3.	The function should return the square of num.
+4.	Call the function with the argument 9 and print the result.
+Expected Output:
+81
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 2. Function Expression with Parameters and return
+Goal: Combine parameters, return, and expression syntax.
+Instructions:
+1.	Declare a let variable isEven and assign it a function expression that takes one parameter num.
+2.	The function should return true if num is even (num % 2 === 0), and false otherwise.
+3.	Call isEven(14) and print the result.
+Expected Output:
+True
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ques 3. Basic Arrow Function Syntax (No Parameters)
+Goal: Understand the simplest form of an arrow function.
+Instructions:
+1.	Declare a const variable named sayHello.
+2.	Assign an arrow function to it that takes no parameters.
+3.	The function should print: "Arrow function deployed!".
+4.	Call the function sayHello().
+Expected Output:
+Arrow function deployed!
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 4. Arrow Function with Single Parameter (No Parentheses)
+Goal: Understand the unique rule for single parameters in arrow functions.
+Instructions:
+1.	Declare a const variable named calculateTriple.
+2.	Assign an arrow function to it that accepts a single parameter x without parentheses around the parameter name.
+3.	The function body should return $x \times 3$.
+4.	Call the function with x = 4 and print the result.
+Expected Output:
+12
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 5. Arrow Function with Multiple Parameters (Explicit Return)
+Goal: Use the standard curly braces {} and the explicit return keyword with multiple parameters.
+Instructions:
+1.	Declare a const variable named getDifference.
+2.	Assign an arrow function to it that accepts two parameters: a and b.
+3.	Use curly braces to define the function body.
+4.	Inside the body, return a - b.
+5.	Call the function with getDifference(20, 12) and print the result.
+Expected Output:
+8
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Ques 6. Implicit Return (Single Line Body)
+Goal: Use the concise syntax for returning a single expression without the return keyword or curly braces.
+Instructions:
+1.	Declare a const variable named isPositive.
+2.	Assign an arrow function that takes one parameter num.
+3.	Use the implicit return syntax to return the boolean result of the condition: num > 0.
+4.	Call the function with isPositive(-10) and print the result.
+Expected Output:
+False
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------

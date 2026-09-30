@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    reference datatype
+    1. function
+
+
+    2.Arrays
+            Array is collection of any type data
+            array is indexed collection the array index always starts from 0
+            every array element stores on the specific index
+            array is squential collection
+            arrays are dynamic and growable by default
+
+        -> How to create array in javascript?
+            there are two ways 
+            1. using array literal
+                    [] -> array literals
+                        -> initial size not possible
+            2. using array contructor
+                    new Array();
+                    -> we can give the initial size to the array
+
+        -> how to store the elements in array?
+            there are three ways
+            1. using bracket notation
+                [index] = element // stores the element on the given index
+            2. use push method
+                arr.push(element) // adds the element to end of the array 
+            3. use unshift method
+                arr.unshift(element) // adds the element to start of the array (on 0th index)
+
+        -> how to copy one array into another array?
+
+
+    3. Object
+            Object is data structure which stores the the data in key value pairs
+    
+    -->
+
+    <script>
+      /*
+      // 1. using array litral
+      const arr = [];
+
+      arr[0] = 10;
+      //   arr[100] = 20;
+      arr.push(20); // adds to 1 index
+      arr.push(30); // adds to 2 index
+
+      arr.unshift(1);
+      arr.unshift(2);
+      console.log(arr);
+
+      // using array constructor
+      const arr1 = new Array(10);
+      // creates the array of 10 empty elements
+      arr1[9] = 30;
+      console.log(arr1.toString());
+      */
+
+      /*
+        how to iterate over the array?
+            1. using tradinational loop
+                arr.length -> returns the length of the array
+                    the length 1 indexed
+                for(let i = 0; i < arr.length; i++){
+                
+                }
+            2. using for..of
+                for(let element of arr){
+                
+                }
+
+        1. separate the diffrent type of data from array into the respective arrays
+            number, string, boolean
+            numberArr = [] // add the number data
+            stringArr = [] // add the string data
+            booleanArr = [] // add the boolean data
+
+            mixedArr = [1,2,4,5,"j", "a", "v", "a", true, false, 0 ,2 ,"s", "c", "r", "i" ,"p" , "t"]
+      */
+
+      /*
+      const mixedArr = [
+        1,
+        2,
+        4,
+        5,
+        "j",
+        "a",
+        "v",
+        "a",
+        true,
+        false,
+        0,
+        2,
+        "s",
+        "c",
+        "r",
+        "i",
+        "p",
+        "t",
+      ];
+
+      const numberArr = [];
+      const stringArr = [];
+      const booleanArr = [];
+
+      for (let element of mixedArr) {
+        if (typeof element === "number") {
+          numberArr.push(element);
+        } else if (typeof element === "string") {
+          stringArr.push(element);
+        } else if (typeof element === "boolean") {
+          booleanArr.push(element);
+        }
+      }
+
+      console.log(mixedArr);
+      console.log(numberArr);
+      console.log(stringArr);
+      console.log(booleanArr);
+      */
+
+      /*
+            how to copy one array to another?
+
+            const arr = [1,2,4];
+            const arr1 = arr;
+
+            arr1.push(5);
+
+            console.log(arr);// 1245
+            console.log(arr1);// 1245
+      */
+
+      // using spread operator
+
+      //   const arr = [1, 2, 3, 4, 5];
+      //   const arr2 = [...arr];
+      //   arr2.push(6);
+      //   console.log(arr);
+      //   console.log(arr2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+Ques 1. Function for Finding the Maximum of Two Numbers
+Goal: Return the result of comparing two input values.
+Instructions:
+1.	Declare a function named findMax that accepts two parameters: a and b.
+2.	Inside the function, use an if-else statement (or the ternary operator) to determine which number is larger.
+3.	Return the larger number.
+4.	Call the function with findMax(100, 50) and print the result.
+Expected Output:
+100
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 2. Function Interaction (Chained Calculations)
+Goal: Create two functions where the output of the first function serves as the input for the second.
+Instructions:
+1.	Declare a function named addTen that takes one number, adds 10 to it, and returns the result.
+2.	Declare a function named doubleResult that takes one number, multiplies it by 2, and prints the final result.
+3.	Call addTen with the number 5, then immediately pass that returned value as the argument to doubleResult.
+Expected Output:
+30
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 3. Function for Number Reversal (Loop integration)
+Goal: Use the loop structure inside a function to manipulate a number.
+Instructions:
+1.	Declare a function named reverseNumber that accepts one parameter: n.
+2.	Inside the function, use a while loop to reverse the digits of $n$. (Hint: use modulo % 10 for the last digit and Math.floor(n / 10) to remove the last digit).
+3.	Declare a let variable reversed initialized to 0. In the loop, use the logic: reversed = reversed * 10 + digit.
+4.	Return the reversed number.
+5.	Call the function with n = 456 and print the result.
+Expected Output:
+654
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 4. Function for Logical Test (Leap Year)
+Goal: Implement complex conditional logic inside a function that returns a boolean value.
+Instructions:
+1.	Declare a function named isLeapYear that accepts one parameter: year.
+2.	The function should return true if it's a leap year, and false otherwise.
+o	A year is a leap year if it is divisible by 4, UNLESS it is divisible by 100 but NOT by 400.
+o	Use the condition: (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)
+3.	Call the function with year = 2000 and print the result.
+4.	Call the function with year = 1900 and print the result.
+Expected Output:
+true
+false
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 5. Recursive Function (Basic Countdown)
+Goal: Introduce the concept of a function calling itself.
+Instructions:
+1.	Declare a function named recursiveCountdown that takes one parameter: n.
+2.	Inside the function:
+o	Base Case: If n is less than 1, print "Done!" and return.
+o	Recursive Step: Print the current value of n.
+o	Call recursiveCountdown with n - 1.
+3.	Call recursiveCountdown(3).
+Expected Output:
+3
+2
+1
+Done!
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ques 6. Function with Multiple return Paths
+Goal: Use conditional branching (if-else if-else) to return one of three different values.
+Instructions:
+1.	Declare a function named getTrafficLightState that accepts a color string.
+2.	Use an if-else if-else structure:
+o	If color is "red", return "Stop".
+o	If color is "yellow", return "Caution".
+o	Otherwise, return "Go".
+3.	Call the function with color = "green" and print the result.
+Expected Output:
+Go
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
