@@ -1,0 +1,382 @@
+==============================================================
+JAVASCRIPT PRACTICE ASSIGNMENTS
+TOPIC: FUNCTION TYPES (NAMED, EXPRESSION, ARROW)
+==============================================================
+
+THE THREE TYPES (for reference)
+-------------------------------
+Named function (declaration) :  function add(a, b) { return a + b; }
+Function expression          :  const add = function (a, b) { return a + b; };
+Arrow function               :  const add = (a, b) => a + b;
+
+
+##############################################################
+PART 1: NAMED FUNCTIONS
+##############################################################
+
+--------------------------------------------------------------
+Q1. Write a program in JavaScript to calculate simple interest using a named function.
+--------------------------------------------------------------
+-> Create a named function calculateSimpleInterest(principal, rate, time).
+-> In the main program, read the principal, rate and time, and call calculateSimpleInterest.
+-> The function will return (principal x rate x time) / 100.
+-> In the main program, catch the returned value and print it.
+
+Sample input :
+Input principal : 5000
+Input rate : 5
+Input time (years) : 2
+
+Sample output : The simple interest is : 500
+
+
+--------------------------------------------------------------
+Q2. Write a program in JavaScript to check whether a number is positive, negative or zero using a named function.
+--------------------------------------------------------------
+-> Create a named function checkNumber(n).
+-> In the main program, read one number and call checkNumber(n).
+-> The function will return "Positive", "Negative" or "Zero".
+-> In the main program, catch the returned value and print it.
+
+Sample input 1 : Input any number : 15
+Sample output 1 : 15 is Positive
+
+Sample input 2 : Input any number : -8
+Sample output 2 : -8 is Negative
+
+Sample input 3 : Input any number : 0
+Sample output 3 : 0 is Zero
+
+
+--------------------------------------------------------------
+Q3. Write a program in JavaScript to print the multiplication table of a number using a named function that prints by itself.
+--------------------------------------------------------------
+-> Create a named function printTable(n).
+-> In the main program, read one number and call printTable(n).
+-> This function does not return anything. It prints the table from 1 to 10 itself using a loop.
+-> In the main program, only call the function. Do not print anything else.
+
+Sample input : Input any number : 3
+
+Sample output :
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+
+
+##############################################################
+PART 2: FUNCTION EXPRESSIONS
+##############################################################
+
+--------------------------------------------------------------
+Q4. Write a program in JavaScript to find the square of any number using a function expression.
+--------------------------------------------------------------
+-> Create a function expression and store it in a const variable named square.
+-> In the main program, read one number and call square(n).
+-> The square function will perform the operation and return the square of the number.
+-> In the main program, catch the returned value and print it.
+
+Sample input : Input any number for square : 20
+Sample output : The square of 20 is : 400
+
+
+--------------------------------------------------------------
+Q5. Write a program in JavaScript to find the area of a rectangle using a function expression.
+--------------------------------------------------------------
+-> Create a function expression stored in a const variable named areaOfRectangle that takes two parameters: length and width.
+-> In the main program, read the length and width and call areaOfRectangle(length, width).
+-> The function will return length x width.
+-> In the main program, catch the returned value and print it.
+
+Sample input :
+Input length : 12
+Input width : 5
+
+Sample output : The area of the rectangle is : 60
+
+
+--------------------------------------------------------------
+Q6. Write a program in JavaScript to check voting eligibility using a function expression.
+--------------------------------------------------------------
+-> Create a function expression stored in a const variable named canVote that takes one parameter: age.
+-> In the main program, read the age and call canVote(age).
+-> The function will return true if age is 18 or more, otherwise false.
+-> In the main program, catch the returned value and print whether the person is eligible to vote or not.
+
+Sample input 1 : Input your age : 21
+Sample output 1 : You are eligible to vote
+
+Sample input 2 : Input your age : 16
+Sample output 2 : You are not eligible to vote
+
+
+--------------------------------------------------------------
+Q7. Write a program in JavaScript to convert kilometers to miles using a function expression.
+--------------------------------------------------------------
+-> Create a function expression stored in a const variable named kmToMiles.
+-> In the main program, read the distance in kilometers and call kmToMiles(km).
+-> The function will return km x 0.621371.
+-> In the main program, catch the returned value and print it with 2 decimal places using toFixed(2).
+
+Sample input : Input distance in kilometers : 10
+Sample output : 10 km = 6.21 miles
+
+
+--------------------------------------------------------------
+Q8. Write a program in JavaScript to greet a user using a function expression that prints by itself.
+--------------------------------------------------------------
+-> Create a function expression stored in a const variable named greetUser that takes one parameter: name.
+-> In the main program, read the name and call greetUser(name).
+-> This function does not return anything. It prints the greeting itself.
+
+Sample input : Input your name : Asha
+Sample output : Hello, Asha! Welcome to JavaScript.
+
+
+##############################################################
+PART 3: ARROW FUNCTIONS
+##############################################################
+
+--------------------------------------------------------------
+Q9. Write a program in JavaScript to find the cube of a number using an arrow function with a single parameter.
+--------------------------------------------------------------
+-> Create an arrow function stored in a const variable named cube.
+-> Write it with one parameter and no parentheses around it, using implicit return (no braces, no return keyword).
+-> In the main program, read one number and call cube(n).
+-> Catch the returned value and print it.
+
+Sample input : Input any number : 3
+Sample output : The cube of 3 is : 27
+
+
+--------------------------------------------------------------
+Q10. Write a program in JavaScript to add two numbers using an arrow function with implicit return.
+--------------------------------------------------------------
+-> Create an arrow function stored in a const variable named add that takes two parameters.
+-> Use implicit return (no braces, no return keyword).
+-> In the main program, read two numbers and call add(a, b).
+-> Catch the returned value and print it.
+
+Sample input : Input two numbers : 15 25
+Sample output : The sum of 15 and 25 is : 40
+
+
+--------------------------------------------------------------
+Q11. Write a program in JavaScript to display a welcome message using an arrow function with no parameters.
+--------------------------------------------------------------
+-> Create an arrow function stored in a const variable named getWelcomeMessage that takes no parameters (empty parentheses).
+-> The function will return the text "Welcome to JavaScript Practice".
+-> In the main program, call getWelcomeMessage(), catch the returned text and print it. No input is needed.
+
+Sample input : (no input)
+Sample output : Welcome to JavaScript Practice
+
+
+--------------------------------------------------------------
+Q12. Write a program in JavaScript to find whether a student has passed or failed using an arrow function with a block body.
+--------------------------------------------------------------
+-> Create an arrow function stored in a const variable named getResult that takes one parameter: marks.
+-> Write it with a block body ({ ... }) using if/else and the return keyword.
+-> The function will return "Pass" if marks are 40 or more, otherwise "Fail".
+-> In the main program, read the marks, call getResult(marks), catch the returned value and print it.
+
+Sample input 1 : Input marks : 65
+Sample output 1 : Result : Pass
+
+Sample input 2 : Input marks : 32
+Sample output 2 : Result : Fail
+
+
+--------------------------------------------------------------
+Q13. Write a program in JavaScript to classify a person as adult or minor using an arrow function with the ternary operator.
+--------------------------------------------------------------
+-> Create an arrow function stored in a const variable named getAgeGroup that takes one parameter: age.
+-> Use implicit return with the ternary operator (condition ? valueIfTrue : valueIfFalse). No if/else and no braces.
+-> The function will return "Adult" if age is 18 or more, otherwise "Minor".
+-> In the main program, read the age, call getAgeGroup(age), catch the returned value and print it.
+
+Sample input 1 : Input age : 20
+Sample output 1 : Age group : Adult
+
+Sample input 2 : Input age : 12
+Sample output 2 : Age group : Minor
+
+
+--------------------------------------------------------------
+Q14. Write a program in JavaScript to find the average of three numbers using an arrow function.
+--------------------------------------------------------------
+-> Create an arrow function stored in a const variable named average that takes three parameters.
+-> Use implicit return. The function will return (a + b + c) / 3.
+-> In the main program, read three numbers and call average(a, b, c).
+-> Catch the returned value and print it with 2 decimal places using toFixed(2).
+
+Sample input : Input three numbers : 80 90 100
+Sample output : The average is : 90.00
+
+
+##############################################################
+PART 4: SAME TASK IN ALL THREE TYPES
+##############################################################
+
+--------------------------------------------------------------
+Q15. Write a program in JavaScript to find the area of a circle using all three function types.
+--------------------------------------------------------------
+-> Create a named function areaNamed(radius).
+-> Create a function expression stored in a const variable areaExpression that takes radius.
+-> Create an arrow function stored in a const variable areaArrow that takes radius.
+-> All three must return 3.14 x radius x radius.
+-> In the main program, read the radius, call all three functions and print each result with 2 decimal places using toFixed(2).
+
+Sample input : Input radius : 5
+
+Sample output :
+Named function : 78.50
+Function expression : 78.50
+Arrow function : 78.50
+
+
+--------------------------------------------------------------
+Q16. Write a program in JavaScript to find the larger of two numbers using all three function types.
+--------------------------------------------------------------
+-> Create a named function largerNamed(a, b).
+-> Create a function expression stored in a const variable largerExpression that takes a and b.
+-> Create an arrow function stored in a const variable largerArrow that takes a and b (use the ternary operator with implicit return).
+-> All three must return the larger number.
+-> In the main program, read two numbers, call all three functions and print each result.
+
+Sample input : Input two numbers : 10 25
+
+Sample output :
+Named function : 25
+Function expression : 25
+Arrow function : 25
+
+
+--------------------------------------------------------------
+Q17. Write a program in JavaScript to convert a named function into a function expression and an arrow function.
+--------------------------------------------------------------
+Given function:
+
+    function multiply(a, b) {
+      return a * b;
+    }
+
+-> Keep the given named function as multiplyNamed (rename it).
+-> Rewrite it as a function expression stored in a const variable multiplyExpression.
+-> Rewrite it as an arrow function with implicit return stored in a const variable multiplyArrow.
+-> In the main program, read two numbers, call all three functions with the same input and print each result.
+
+Sample input : Input two numbers : 6 7
+
+Sample output :
+Named function : 42
+Function expression : 42
+Arrow function : 42
+
+
+##############################################################
+PART 5: SCENARIO-BASED QUESTIONS (MIXED TYPES)
+Each question tells you which type to use for each function.
+##############################################################
+
+--------------------------------------------------------------
+Q18. Write a program in JavaScript to prepare a salary slip using mixed function types.
+--------------------------------------------------------------
+-> Create an arrow function calculateHRA(basic) that returns 20% of the basic salary.
+-> Create a function expression calculateDA(basic) that returns 10% of the basic salary.
+-> Create a named function calculateGross(basic) that calls calculateHRA and calculateDA and returns basic + HRA + DA.
+-> In the main program, read the basic salary, call the three functions and print the details.
+
+Sample input : Input basic salary : 20000
+
+Sample output :
+HRA : 4000
+DA : 2000
+Gross salary : 26000
+
+
+--------------------------------------------------------------
+Q19. Write a program in JavaScript to build a simple calculator using mixed function types.
+--------------------------------------------------------------
+-> Create an arrow function add(a, b) and an arrow function multiply(a, b).
+-> Create a function expression subtract(a, b).
+-> Create a named function divide(a, b) that returns "Cannot divide by zero" if b is 0, otherwise a / b.
+-> In the main program, read two numbers and an operator (+, -, *, /), use a switch statement to call the matching function, and print the result.
+
+Sample input 1 :
+Input two numbers : 20 4
+Input operator : /
+
+Sample output 1 : Result : 5
+
+Sample input 2 :
+Input two numbers : 10 0
+Input operator : /
+
+Sample output 2 : Result : Cannot divide by zero
+
+
+--------------------------------------------------------------
+Q20. Write a program in JavaScript to calculate the fuel cost of a trip using mixed function types.
+--------------------------------------------------------------
+-> Create an arrow function calculateFuelNeeded(distance, mileage) that returns distance / mileage.
+-> Create a function expression calculateTripCost(fuel, pricePerLitre) that returns fuel x pricePerLitre.
+-> Create a named function printTripSummary(distance, mileage, pricePerLitre) that calls the two functions above and prints the summary itself.
+-> In the main program, read the three values and only call printTripSummary.
+
+Sample input :
+Input distance (km) : 300
+Input mileage (km per litre) : 15
+Input price per litre : 100
+
+Sample output :
+Fuel needed : 20 litres
+Trip cost : Rs 2000
+
+
+--------------------------------------------------------------
+Q21. Write a program in JavaScript to calculate the total of an online order using mixed function types.
+--------------------------------------------------------------
+-> Create an arrow function getDeliveryCharge(amount) using the ternary operator that returns 0 if amount is 500 or more, otherwise 40.
+-> Create a function expression calculateGST(amount) that returns 5% of the amount.
+-> Create a named function calculateOrderTotal(amount) that calls the two functions above and returns amount + GST + delivery charge.
+-> In the main program, read the order amount, call the functions and print the details.
+
+Sample input 1 : Input order amount : 400
+
+Sample output 1 :
+GST : 20
+Delivery charge : 40
+Total : 460
+
+Sample input 2 : Input order amount : 1000
+
+Sample output 2 :
+GST : 50
+Delivery charge : 0
+Total : 1050
+
+
+--------------------------------------------------------------
+Q22. Write a program in JavaScript to prepare a BMI report using mixed function types.
+--------------------------------------------------------------
+-> Create an arrow function calculateBMI(weight, height) that returns weight / (height x height). Weight is in kg and height is in meters.
+-> Create a function expression getBMICategory(bmi) that returns "Underweight" if bmi is below 18.5, "Normal" if below 25, "Overweight" if below 30, otherwise "Obese".
+-> Create a named function printBMIReport(weight, height) that calls the two functions above and prints the report itself. Show BMI with 2 decimal places using toFixed(2).
+-> In the main program, read the weight and height and only call printBMIReport.
+
+Sample input :
+Input weight (kg) : 70
+Input height (meters) : 1.75
+
+Sample output :
+BMI : 22.86
+Category : Normal
+

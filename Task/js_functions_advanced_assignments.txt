@@ -1,0 +1,525 @@
+==============================================================
+JAVASCRIPT PRACTICE ASSIGNMENTS
+TOPIC: FUNCTIONS - CALLBACK, HIGHER-ORDER FUNCTION (HOF),
+       CLOSURE AND CONSTRUCTOR FUNCTION
+==============================================================
+
+QUICK REFERENCE
+---------------
+Callback          : a function passed as an argument to another function.
+                    operate(10, 5, add);
+
+Higher-order      : a function that takes a function as an argument,
+function (HOF)      or returns a function.
+                    function operate(a, b, callback) { return callback(a, b); }
+                    function makeMultiplier(f) { return function (n) { return n * f; }; }
+
+Closure           : an inner function that remembers the variables of the
+                    outer function even after the outer function has finished.
+                    function createCounter() {
+                      let count = 0;
+                      return function () { count = count + 1; return count; };
+                    }
+
+Constructor       : a function (name starts with a capital letter) that
+function            creates objects when called with "new". It uses "this".
+                    function Student(name, marks) {
+                      this.name = name;
+                      this.marks = marks;
+                    }
+                    let s1 = new Student("Asha", 85);
+
+
+##############################################################
+PART 1: CALLBACK FUNCTIONS
+##############################################################
+
+--------------------------------------------------------------
+Q1. Write a program in JavaScript to perform arithmetic operations using a callback function.
+--------------------------------------------------------------
+-> Create three named functions: add(a, b), subtract(a, b) and multiply(a, b), each returning its result.
+-> Create a named function operate(a, b, callback) that calls callback(a, b) and returns the result.
+-> In the main program, read two numbers and call operate three times, passing add, subtract and multiply by name (without brackets).
+-> Catch each returned value and print it.
+
+Sample input : Input two numbers : 10 5
+
+Sample output :
+Addition : 15
+Subtraction : 5
+Multiplication : 50
+
+
+--------------------------------------------------------------
+Q2. Write a program in JavaScript to greet and say goodbye to a user using callback functions.
+--------------------------------------------------------------
+-> Create two named functions sayHello(name) and sayGoodbye(name). Each one returns a message.
+-> Create a named function processName(name, callback) that calls callback(name) and returns the message.
+-> In the main program, read a name, call processName once with sayHello and once with sayGoodbye, and print both messages.
+
+Sample input : Input your name : Asha
+
+Sample output :
+Hello, Asha!
+Goodbye, Asha!
+
+
+--------------------------------------------------------------
+Q3. Write a program in JavaScript to apply a callback function to every element of an array.
+--------------------------------------------------------------
+-> Create two named functions: double(n) and square(n).
+-> Create a named function applyToEach(arr, callback) that creates a new array, calls callback on every element using a loop, stores each result in the new array, and returns the new array.
+-> In the main program, read n and then n numbers. Call applyToEach once with double and once with square.
+-> Print both result arrays.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 1 2 3 4 5
+
+Sample output :
+Doubled : 2 4 6 8 10
+Squared : 1 4 9 16 25
+
+
+--------------------------------------------------------------
+Q4. Write a program in JavaScript to run different callback functions depending on a condition.
+--------------------------------------------------------------
+-> Create two named functions onEven(n) and onOdd(n). Each one prints a message by itself.
+-> Create a named function checkNumber(n, onEven, onOdd) that calls onEven(n) if the number is even, otherwise calls onOdd(n).
+-> In the main program, read one number and call checkNumber(n, onEven, onOdd).
+
+Sample input 1 : Input any number : 8
+Sample output 1 : 8 is an even number
+
+Sample input 2 : Input any number : 7
+Sample output 2 : 7 is an odd number
+
+
+--------------------------------------------------------------
+Q5. Write a program in JavaScript to calculate discounted prices by passing arrow functions directly as callbacks.
+--------------------------------------------------------------
+-> Create a named function applyDiscount(price, discountFn) that returns discountFn(price).
+-> In the main program, read the price.
+-> Call applyDiscount twice, writing the arrow function directly inside the call (do not store it in a variable first):
+     student discount : price x 0.90
+     festival discount : price x 0.80
+-> Print both prices.
+
+Sample input : Input price : 1000
+
+Sample output :
+Student price : 900
+Festival price : 800
+
+
+##############################################################
+PART 2: HIGHER-ORDER FUNCTIONS
+##############################################################
+
+--------------------------------------------------------------
+Q6. Write a program in JavaScript to create your own filter function.
+--------------------------------------------------------------
+-> Create two named functions: isPositive(n) and isEven(n), each returning true or false.
+-> Create a named higher-order function filterArray(arr, testFn) that goes through the array using a loop and returns a new array containing only the elements for which testFn returns true.
+-> In the main program, read n and then n numbers. Call filterArray with isPositive and with isEven.
+-> Print both result arrays.
+
+Sample input :
+Input number of elements : 6
+Input 6 elements : 12 -5 8 -3 7 0
+
+Sample output :
+Positive numbers : 12 8 7
+Even numbers : 12 8 0
+
+
+--------------------------------------------------------------
+Q7. Write a program in JavaScript to create your own reduce function.
+--------------------------------------------------------------
+-> Create a named higher-order function reduceArray(arr, reducer, initial). It starts with total = initial, then for every element sets total = reducer(total, element), and finally returns total.
+-> Create three reducer functions (any type): sum, product, and largest (returns the bigger of two numbers).
+-> In the main program, read n and then n numbers. Call reduceArray three times:
+     sum      with initial 0
+     product  with initial 1
+     largest  with initial arr[0]
+-> Print the three results.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 1 2 3 4 5
+
+Sample output :
+Sum : 15
+Product : 120
+Largest : 5
+
+
+--------------------------------------------------------------
+Q8. Write a program in JavaScript to create a higher-order function that returns a function.
+--------------------------------------------------------------
+-> Create a named function makeMultiplier(factor) that returns a new function. The returned function takes one number and returns that number multiplied by factor.
+-> In the main program, create two functions: double = makeMultiplier(2) and triple = makeMultiplier(3).
+-> Read one number, call both functions with it and print the results.
+
+Sample input : Input any number : 5
+
+Sample output :
+Double : 10
+Triple : 15
+
+
+--------------------------------------------------------------
+Q9. Write a program in JavaScript to repeat an action a given number of times using a higher-order function.
+--------------------------------------------------------------
+-> Create a function printSquare(n) that prints "Square of n is n x n" by itself.
+-> Create a named higher-order function repeat(times, action) that uses a loop to call action(i) for i = 1, 2, ... times.
+-> In the main program, read the number of times and call repeat(times, printSquare).
+
+Sample input : Input number of times : 3
+
+Sample output :
+Square of 1 is 1
+Square of 2 is 4
+Square of 3 is 9
+
+
+--------------------------------------------------------------
+Q10. Write a program in JavaScript to combine two functions into one using a higher-order function.
+--------------------------------------------------------------
+-> Create two functions: doubleIt(n) returns n x 2, and addTen(n) returns n + 10.
+-> Create a named higher-order function combine(f, g) that returns a new function. The new function takes one value x and returns g(f(x)) (first f, then g).
+-> In the main program, create doubleThenAdd = combine(doubleIt, addTen) and addThenDouble = combine(addTen, doubleIt).
+-> Read one number, call both new functions and print the results.
+
+Sample input : Input any number : 5
+
+Sample output :
+Double then add ten : 20
+Add ten then double : 30
+
+
+##############################################################
+PART 3: CLOSURES
+##############################################################
+
+--------------------------------------------------------------
+Q11. Write a program in JavaScript to create a counter with a private variable using a closure.
+--------------------------------------------------------------
+-> Create a named function createCounter() that has a local variable count = 0 and returns a function.
+-> The returned function increases count by 1 and returns the new value.
+-> In the main program, create two counters: counter1 and counter2.
+-> Call counter1 three times and counter2 once. Print every returned value.
+-> The count variable must not be accessible directly from the main program.
+
+Sample input : (no input)
+
+Sample output :
+Counter 1 : 1
+Counter 1 : 2
+Counter 1 : 3
+Counter 2 : 1
+
+
+--------------------------------------------------------------
+Q12. Write a program in JavaScript to create a bank account with a private balance using a closure.
+--------------------------------------------------------------
+-> Create a named function createAccount(openingBalance) with a local variable balance.
+-> It returns an object with three functions: deposit(amount), withdraw(amount) and getBalance().
+-> withdraw returns "Insufficient balance" (and does not change the balance) if amount is more than balance; otherwise it reduces the balance.
+-> In the main program, read the opening balance, deposit amount and withdraw amount. Call the functions in that order and print the messages and the final balance.
+
+Sample input 1 :
+Input opening balance : 1000
+Input deposit amount : 500
+Input withdraw amount : 200
+
+Sample output 1 : Balance : 1300
+
+Sample input 2 :
+Input opening balance : 1000
+Input deposit amount : 500
+Input withdraw amount : 5000
+
+Sample output 2 :
+Insufficient balance
+Balance : 1500
+
+
+--------------------------------------------------------------
+Q13. Write a program in JavaScript to generate unique IDs with a prefix using a closure.
+--------------------------------------------------------------
+-> Create a named function createIdGenerator(prefix) with a private variable number = 0.
+-> It returns a function that increases number by 1 and returns prefix + number (for example "EMP1").
+-> In the main program, create an employee generator with prefix "EMP" and a student generator with prefix "STU".
+-> Call the employee generator three times and the student generator once. Print every ID.
+
+Sample input : (no input)
+
+Sample output :
+EMP1
+EMP2
+EMP3
+STU1
+
+
+--------------------------------------------------------------
+Q14. Write a program in JavaScript to welcome a user only once using a closure.
+--------------------------------------------------------------
+-> Create a named function createWelcome(name) with a private variable welcomed = false.
+-> It returns a function. The first time it is called, it sets welcomed to true and returns "Welcome, <name>!". Every later call returns "Already welcomed".
+-> In the main program, read the name, create the welcome function and call it twice. Print both returned values.
+
+Sample input : Input your name : Asha
+
+Sample output :
+Welcome, Asha!
+Already welcomed
+
+
+--------------------------------------------------------------
+Q15. Write a program in JavaScript to track a spending budget using a closure.
+--------------------------------------------------------------
+-> Create a named function createExpenseTracker(budget) with a private variable remaining = budget.
+-> It returns a function spend(amount). If amount is less than or equal to remaining, it reduces remaining and returns "Remaining : <remaining>". Otherwise it returns "Budget exceeded" and does not change remaining.
+-> In the main program, read the budget and three expense amounts, call spend for each, and print the returned messages.
+
+Sample input :
+Input budget : 1000
+Input 3 expenses : 400 500 300
+
+Sample output :
+Remaining : 600
+Remaining : 100
+Budget exceeded
+
+
+--------------------------------------------------------------
+Q16. Write a program in JavaScript to create an array of functions in a loop where each function remembers its own value.
+--------------------------------------------------------------
+-> Create an empty array called functions.
+-> Using a for loop with let i from 0 to 2, store a function in functions[i]. Each function returns (i + 1) x 10.
+-> Using another loop, call each stored function and print the result.
+-> Each function must remember its own i (10, 20, 30), not the final value of the loop.
+
+Sample input : (no input)
+
+Sample output :
+Function 1 : 10
+Function 2 : 20
+Function 3 : 30
+
+
+##############################################################
+PART 4: CONSTRUCTOR FUNCTIONS
+##############################################################
+
+--------------------------------------------------------------
+Q17. Write a program in JavaScript to create student objects using a constructor function.
+--------------------------------------------------------------
+-> Create a constructor function Student(name, rollNo, marks) that stores the three values using this.
+-> In the main program, read the details of two students and create two objects using new.
+-> Print the details of both students using their properties.
+
+Sample input :
+Input student 1 (name rollNo marks) : Asha 1 85
+Input student 2 (name rollNo marks) : Ravi 2 72
+
+Sample output :
+Name : Asha, Roll No : 1, Marks : 85
+Name : Ravi, Roll No : 2, Marks : 72
+
+
+--------------------------------------------------------------
+Q18. Write a program in JavaScript to create a Rectangle constructor with methods.
+--------------------------------------------------------------
+-> Create a constructor function Rectangle(length, width) that stores both values using this.
+-> Inside the constructor, add two methods: this.area (returns length x width) and this.perimeter (returns 2 x (length + width)).
+-> In the main program, read the length and width, create an object using new and call both methods.
+-> Print the results.
+
+Sample input :
+Input length : 10
+Input width : 5
+
+Sample output :
+Area : 50
+Perimeter : 30
+
+
+--------------------------------------------------------------
+Q19. Write a program in JavaScript to create a Car constructor that changes its own speed.
+--------------------------------------------------------------
+-> Create a constructor function Car(brand, model) that stores both values and sets this.speed = 0.
+-> Add three methods inside the constructor: accelerate(amount) increases the speed, brake(amount) decreases the speed (the speed must never go below 0), and getSpeed() returns the speed.
+-> In the main program, read the brand and model, create the car and read two acceleration values and one brake value.
+-> After each action, print the speed.
+
+Sample input :
+Input brand : Honda
+Input model : City
+Input 2 acceleration values : 50 30
+Input brake value : 100
+
+Sample output :
+Honda City speed : 50
+Honda City speed : 80
+Honda City speed : 0
+
+
+--------------------------------------------------------------
+Q20. Write a program in JavaScript to create a BankAccount constructor.
+--------------------------------------------------------------
+-> Create a constructor function BankAccount(holderName, balance) that stores both values using this.
+-> Add methods inside the constructor: deposit(amount) increases the balance, and withdraw(amount) reduces the balance, or returns "Insufficient balance" if the amount is more than the balance.
+-> In the main program, read the details, create the object, deposit once and withdraw twice. Print the balance after the deposit, the message or balance after each withdrawal.
+
+Sample input :
+Input holder name : Asha
+Input opening balance : 1000
+Input deposit amount : 500
+Input 2 withdraw amounts : 2000 300
+
+Sample output :
+Balance after deposit : 1500
+Insufficient balance
+Balance after withdrawal : 1200
+
+
+--------------------------------------------------------------
+Q21. Write a program in JavaScript to create a Book constructor for a library.
+--------------------------------------------------------------
+-> Create a constructor function Book(title) that stores the title and sets this.isIssued = false.
+-> Add two methods inside the constructor:
+     issueBook()  : if the book is not issued, mark it issued and return "<title> has been issued". Otherwise return "<title> is already issued".
+     returnBook() : mark it not issued and return "<title> has been returned".
+-> In the main program, read the title, create the book, then call issueBook, issueBook, returnBook in that order. Print each returned message.
+
+Sample input : Input book title : Atomic Habits
+
+Sample output :
+Atomic Habits has been issued
+Atomic Habits is already issued
+Atomic Habits has been returned
+
+
+--------------------------------------------------------------
+Q22. Write a program in JavaScript to create an Employee constructor with a salary raise.
+--------------------------------------------------------------
+-> Create a constructor function Employee(name, monthlySalary) that stores both values using this.
+-> Add two methods inside the constructor: getAnnualSalary() returns monthlySalary x 12, and giveRaise(percent) increases monthlySalary by that percent.
+-> In the main program, read the name, monthly salary and raise percent. Create the object, print the annual salary, give the raise and print the annual salary again.
+
+Sample input :
+Input employee name : Asha
+Input monthly salary : 30000
+Input raise percent : 10
+
+Sample output :
+Name : Asha
+Annual salary : 360000
+Annual salary after 10% raise : 396000
+
+
+--------------------------------------------------------------
+Q23. Write a program in JavaScript to create a Product constructor with a default value.
+--------------------------------------------------------------
+-> Create a constructor function Product(name, price, quantity = 1) that stores the three values using this. Quantity defaults to 1.
+-> Add a method getTotal() inside the constructor that returns price x quantity.
+-> In the main program, create the first product with only a name and price, and the second product with name, price and quantity.
+-> Print the total of each product.
+
+Sample input :
+Input product 1 (name price) : Pen 10
+Input product 2 (name price quantity) : Notebook 50 4
+
+Sample output :
+Pen total : 10
+Notebook total : 200
+
+
+##############################################################
+PART 5: SCENARIO-BASED QUESTIONS (MIXED CONCEPTS)
+##############################################################
+
+--------------------------------------------------------------
+Q24. Write a program in JavaScript to find passed students and toppers using a constructor and a higher-order function.
+--------------------------------------------------------------
+-> Create a constructor function Student(name, marks).
+-> Create callback functions isPassed(student) (marks 40 or more) and isTopper(student) (marks 75 or more), each returning true or false.
+-> Create a higher-order function filterStudents(students, testFn) that returns a new array of the students for whom testFn returns true.
+-> In the main program, read the number of students, then read each name and marks and store the Student objects in an array.
+-> Call filterStudents with isPassed and with isTopper, and print the names of the students in each result.
+
+Sample input :
+Input number of students : 3
+Input student 1 (name marks) : Asha 85
+Input student 2 (name marks) : Ravi 32
+Input student 3 (name marks) : Meena 60
+
+Sample output :
+Passed students : Asha Meena
+Toppers : Asha
+
+
+--------------------------------------------------------------
+Q25. Write a program in JavaScript to build a login system that locks after wrong attempts using a closure.
+--------------------------------------------------------------
+-> Create a named function createLogin(correctPassword, maxAttempts) with private variables for the number of wrong attempts made and a locked status.
+-> It returns a function attempt(password):
+     if already locked, return "Account locked"
+     if the password is correct, return "Login successful"
+     otherwise add one wrong attempt; if wrong attempts reach maxAttempts, lock the account and return "Account locked"; else return "Wrong password. Attempts left : <number>"
+-> In the main program, read the correct password, the maximum attempts and 4 password attempts. Call the returned function for each attempt and print the messages.
+-> Once the account is locked it stays locked, even for the correct password.
+
+Sample input :
+Input correct password : abc123
+Input maximum attempts : 3
+Input 4 password attempts : 111 222 333 abc123
+
+Sample output :
+Wrong password. Attempts left : 2
+Wrong password. Attempts left : 1
+Account locked
+Account locked
+
+
+--------------------------------------------------------------
+Q26. Write a program in JavaScript to calculate a shopping cart total using a constructor and callback discounts.
+--------------------------------------------------------------
+-> Create a constructor function Cart() with an empty array this.items.
+-> Add two methods inside the constructor:
+     addItem(name, price) : stores the item (name and price) at the end of the items array using index.
+     getTotal(discountFn) : adds up all prices using a loop. If discountFn is given, return discountFn(total), otherwise return the total.
+-> Create two arrow functions to be passed as callbacks: tenPercentOff (total x 0.90) and flat300Off (total - 300).
+-> In the main program, read two items, add them to the cart and print the total without a discount, with tenPercentOff and with flat300Off.
+
+Sample input :
+Input item 1 (name price) : Shirt 500
+Input item 2 (name price) : Shoes 1500
+
+Sample output :
+Total without discount : 2000
+With 10% off : 1800
+With flat 300 off : 1700
+
+
+--------------------------------------------------------------
+Q27. Write a program in JavaScript to give employees unique IDs automatically using a closure and a constructor.
+--------------------------------------------------------------
+-> Create a named function createIdGenerator(prefix) that returns a closure which gives "EMP1", "EMP2", ... on each call (private counter).
+-> In the main program, create the generator once with prefix "EMP".
+-> Create a constructor function Employee(name) that stores the name and sets this.id by calling the generator.
+-> In the main program, read 3 names, create 3 Employee objects with new and print each employee's ID and name.
+
+Sample input : Input 3 employee names : Asha Ravi Meena
+
+Sample output :
+EMP1 - Asha
+EMP2 - Ravi
+EMP3 - Meena
+
+
+==============================================================
+END OF ASSIGNMENT: CALLBACK, HOF, CLOSURE, CONSTRUCTOR
+==============================================================
