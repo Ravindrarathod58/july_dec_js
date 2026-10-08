@@ -1,0 +1,399 @@
+==============================================================
+JAVASCRIPT PRACTICE ASSIGNMENTS
+TOPIC: ARRAYS (WITHOUT USING METHODS)
+==============================================================
+
+##############################################################
+PART 1: ARRAY BASICS
+##############################################################
+
+--------------------------------------------------------------
+Q1. Write a program in JavaScript to read n numbers into an array and display them.
+--------------------------------------------------------------
+-> Declare an empty array.
+-> Read the number of elements n.
+-> Using a loop, read n numbers and store each number in the array by index.
+-> Using another loop, display all the elements of the array.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 10 20 30 40 50
+
+Sample output : The elements of the array are : 10 20 30 40 50
+
+
+--------------------------------------------------------------
+Q2. Write a program in JavaScript to find the sum and average of the elements of an array.
+--------------------------------------------------------------
+-> Read n and then read n numbers into an array.
+-> Using a loop, add all the elements to find the sum.
+-> Calculate the average as sum divided by the number of elements (use arr.length).
+-> Print the sum and the average.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 10 20 30 40 50
+
+Sample output :
+Sum of elements : 150
+Average of elements : 30
+
+
+--------------------------------------------------------------
+Q3. Write a program in JavaScript to display the elements of an array in reverse order.
+--------------------------------------------------------------
+-> Read n and then read n numbers into an array.
+-> Using a loop that starts from the last index and goes down to 0, build the output string.
+-> Do not change the original array and do not use reverse().
+-> Print the output string.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 10 20 30 40 50
+
+Sample output : The array in reverse order : 50 40 30 20 10
+
+
+--------------------------------------------------------------
+Q4. Write a program in JavaScript to find the largest and smallest elements of an array.
+--------------------------------------------------------------
+-> Read n and then read n numbers into an array.
+-> Assume the first element is both the largest and the smallest, then compare it with the remaining elements using a loop.
+-> Do not use Math.max() or Math.min().
+-> Print the largest and the smallest element.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 45 12 78 3 56
+
+Sample output :
+Largest element : 78
+Smallest element : 3
+
+
+--------------------------------------------------------------
+Q5. Write a program in JavaScript to count the even and odd numbers in an array.
+--------------------------------------------------------------
+-> Read n and then read n numbers into an array.
+-> Using a loop, check each element and increase the even counter or the odd counter.
+-> Print both counts.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 12 7 20 15 8
+
+Sample output :
+Even numbers : 3
+Odd numbers : 2
+
+
+##############################################################
+PART 2: SEARCHING AND COUNTING
+##############################################################
+
+--------------------------------------------------------------
+Q6. Write a program in JavaScript to search for an element in an array.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Read the element to search.
+-> Using a loop, compare each element with the search element. When it is found, remember its index and stop the loop.
+-> Do not use indexOf() or includes().
+-> Print the index of the first match, or a "not found" message.
+
+Sample input 1 :
+Input number of elements : 5
+Input 5 elements : 10 25 30 45 50
+Input element to search : 30
+
+Sample output 1 : Element 30 found at index 2
+
+Sample input 2 :
+Input number of elements : 5
+Input 5 elements : 10 25 30 45 50
+Input element to search : 99
+
+Sample output 2 : Element 99 not found
+
+
+--------------------------------------------------------------
+Q7. Write a program in JavaScript to count how many times an element appears in an array.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Read the element to count.
+-> Using a loop, increase a counter each time the element is found.
+-> Print the count.
+
+Sample input :
+Input number of elements : 6
+Input 6 elements : 2 5 2 8 2 9
+Input element to count : 2
+
+Sample output : 2 appears 3 times
+
+
+--------------------------------------------------------------
+Q8. Write a program in JavaScript to find the second largest element of an array without sorting.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array. Assume the array has at least two different values.
+-> Using loops, first find the largest element, then find the largest element that is smaller than it.
+-> Do not use sort().
+-> Print the second largest element.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 45 12 78 3 56
+
+Sample output : The second largest element is : 56
+
+
+--------------------------------------------------------------
+Q9. Write a program in JavaScript to check whether an array is sorted in ascending order.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Using a loop, compare every element with the next one. If any element is greater than the next one, the array is not sorted.
+-> Print whether the array is sorted or not.
+
+Sample input 1 :
+Input number of elements : 5
+Input 5 elements : 10 20 30 40 50
+
+Sample output 1 : The array is sorted in ascending order
+
+Sample input 2 :
+Input number of elements : 5
+Input 5 elements : 10 30 20 40 50
+
+Sample output 2 : The array is not sorted
+
+
+--------------------------------------------------------------
+Q10. Write a program in JavaScript to count the positive, negative and zero elements of an array.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Using a loop, check each element and increase the matching counter.
+-> Print all three counts.
+
+Sample input :
+Input number of elements : 6
+Input 6 elements : 5 -3 0 8 -1 0
+
+Sample output :
+Positive numbers : 2
+Negative numbers : 2
+Zeros : 2
+
+
+##############################################################
+PART 3: MODIFYING ARRAYS
+##############################################################
+
+--------------------------------------------------------------
+Q11. Write a program in JavaScript to insert an element at a given position of an array.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Read the index (position) and the value to insert.
+-> Create a second empty array. Using loops, copy the elements before the position, store the new value, then copy the remaining elements.
+-> Do not use splice(), push() or unshift().
+-> Print the new array.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 10 20 30 40 50
+Input index to insert at : 2
+Input value to insert : 25
+
+Sample output : Array after insertion : 10 20 25 30 40 50
+
+
+--------------------------------------------------------------
+Q12. Write a program in JavaScript to delete an element at a given position of an array.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Read the index of the element to delete.
+-> Create a second empty array. Using a loop, copy every element except the one at the given index.
+-> Do not use splice(), pop() or shift().
+-> Print the new array.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 10 20 30 40 50
+Input index to delete : 1
+
+Sample output : Array after deletion : 10 30 40 50
+
+
+--------------------------------------------------------------
+Q13. Write a program in JavaScript to reverse an array in the same array without using reverse().
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Print the original array.
+-> Using a loop that runs up to half of the array, swap the first element with the last, the second with the second last, and so on. Use a temporary variable for swapping.
+-> Do not create a second array.
+-> Print the reversed array.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 1 2 3 4 5
+
+Sample output :
+Original array : 1 2 3 4 5
+Reversed array : 5 4 3 2 1
+
+
+--------------------------------------------------------------
+Q14. Write a program in JavaScript to copy an array into another array using a loop.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array called original.
+-> Create an empty array called copy and fill it using a loop, element by element.
+-> Print both arrays.
+-> Change the first element of copy to 99 and print both arrays again to show that original is not affected.
+
+Sample input :
+Input number of elements : 3
+Input 3 elements : 10 20 30
+
+Sample output :
+Original array : 10 20 30
+Copied array : 10 20 30
+After changing the first element of the copy :
+Original array : 10 20 30
+Copied array : 99 20 30
+
+
+--------------------------------------------------------------
+Q15. Write a program in JavaScript to merge two arrays into a third array.
+--------------------------------------------------------------
+-> Read the size and elements of the first array.
+-> Read the size and elements of the second array.
+-> Create a third empty array. Using loops, copy all elements of the first array and then all elements of the second array into it.
+-> Do not use concat() or the spread operator.
+-> Print the merged array.
+
+Sample input :
+Input size of first array : 3
+Input 3 elements : 1 2 3
+Input size of second array : 4
+Input 4 elements : 4 5 6 7
+
+Sample output : Merged array : 1 2 3 4 5 6 7
+
+
+--------------------------------------------------------------
+Q16. Write a program in JavaScript to sort an array in ascending order using bubble sort.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Using two nested loops, compare each pair of neighbouring elements and swap them if the first is greater than the second (use a temporary variable).
+-> Do not use sort().
+-> Print the sorted array.
+
+Sample input :
+Input number of elements : 5
+Input 5 elements : 45 12 78 3 56
+
+Sample output : Sorted array : 3 12 45 56 78
+
+
+--------------------------------------------------------------
+Q17. Write a program in JavaScript to print the unique elements of an array.
+--------------------------------------------------------------
+-> Read n, then read n numbers into an array.
+-> Create an empty array called unique. For each element of the original array, use a loop to check whether it is already in unique. If it is not, add it.
+-> Do not use includes() or indexOf().
+-> Print the unique array. Keep the order of first appearance.
+
+Sample input :
+Input number of elements : 6
+Input 6 elements : 1 2 2 3 1 4
+
+Sample output : Unique elements : 1 2 3 4
+
+
+##############################################################
+PART 4: SCENARIO-BASED QUESTIONS
+##############################################################
+
+--------------------------------------------------------------
+Q18. Write a program in JavaScript to prepare a marks summary of 5 students using an array.
+--------------------------------------------------------------
+-> Read the marks of 5 students into an array.
+-> Using loops, find the total marks, the average marks, the highest marks and the number of students who passed (marks of 40 or more).
+-> Print all four results.
+
+Sample input : Input marks of 5 students : 78 45 32 90 66
+
+Sample output :
+Total marks : 311
+Average marks : 62.2
+Highest marks : 90
+Students passed : 4
+
+
+--------------------------------------------------------------
+Q19. Write a program in JavaScript to analyse the temperatures of a week using arrays.
+--------------------------------------------------------------
+-> Create an array of day names: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].
+-> Read 7 temperatures into a second array (one for each day, in the same order).
+-> Find the hottest day, the coldest day and the number of days with a temperature above the weekly average.
+-> Use the index of the temperature to get the matching day name.
+-> Print the results.
+
+Sample input : Input 7 temperatures : 32 35 30 28 36 33 31
+
+Sample output :
+Hottest day : Friday (36 degrees)
+Coldest day : Thursday (28 degrees)
+Days above average : 3
+
+
+--------------------------------------------------------------
+Q20. Write a program in JavaScript to prepare the bill of a shopping cart using an array of prices.
+--------------------------------------------------------------
+-> Read the prices of 4 items into an array.
+-> Find the total price and the price of the costliest item.
+-> If the total is more than 1000, give a 10% discount on the total. Otherwise the discount is 0.
+-> Print the total, the costliest item price, the discount and the amount payable.
+
+Sample input : Input prices of 4 items : 250 400 150 600
+
+Sample output :
+Total : 1400
+Costliest item : 600
+Discount : 140
+Amount payable : 1260
+
+
+--------------------------------------------------------------
+Q21. Write a program in JavaScript to prepare the attendance report of a class using an array.
+--------------------------------------------------------------
+-> Read the attendance of 5 students into an array. Use 1 for present and 0 for absent.
+-> Count the number of present and absent students.
+-> Calculate the attendance percentage as (present / total students) x 100.
+-> Print the roll numbers of the absent students (roll number = index + 1).
+
+Sample input : Input attendance of 5 students : 1 1 0 1 1
+
+Sample output :
+Present : 4
+Absent : 1
+Attendance percentage : 80%
+Absent roll numbers : 3
+
+
+--------------------------------------------------------------
+Q22. Write a program in JavaScript to prepare a bank statement summary using an array of transactions.
+--------------------------------------------------------------
+-> Read the opening balance.
+-> Read 5 transactions into an array. A positive value is a deposit and a negative value is a withdrawal.
+-> Using a loop, find the total deposits, the total withdrawals (print it as a positive number) and the final balance.
+-> Print the three results.
+
+Sample input :
+Input opening balance : 5000
+Input 5 transactions : 2000 -1500 -500 3000 -2500
+
+Sample output :
+Total deposits : 5000
+Total withdrawals : 4500
+Final balance : 5500
+
+

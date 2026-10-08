@@ -1,0 +1,691 @@
+==============================================================
+JAVASCRIPT PRACTICE ASSIGNMENTS
+TOPIC: OBJECTS (WITHOUT USING METHODS)
+==============================================================
+
+QUICK REFERENCE
+---------------
+Create an object    :  let student = { name: "Asha", marks: 85 };
+Read a property     :  student.name        or   student["name"]
+Dynamic property    :  let key = "marks";  student[key]
+Add / update        :  student.city = "Pune";   student.marks = 90;
+Delete a property   :  delete student.city;
+Check a property    :  "marks" in student        (true or false)
+Loop over an object :  for (let key in student) { console.log(key + " : " + student[key]); }
+Nested object       :  employee.address.city
+Array in an object  :  student.marks[0]
+Array of objects    :  students[0].name
+
+##############################################################
+PART 1: CREATING, READING AND CHANGING OBJECTS
+##############################################################
+
+--------------------------------------------------------------
+Q1. Write a program in JavaScript to create a student object from user input and display its properties.
+--------------------------------------------------------------
+-> Read the name, roll number, marks and city of a student.
+-> Create an object called student with the properties name, rollNo, marks and city.
+-> Print each property using dot notation.
+
+Sample input :
+Input name : Asha
+Input roll number : 101
+Input marks : 85
+Input city : Pune
+
+Sample output :
+Name : Asha
+Roll No : 101
+Marks : 85
+City : Pune
+
+
+--------------------------------------------------------------
+Q2. Write a program in JavaScript to read a property using a name given by the user (bracket notation).
+--------------------------------------------------------------
+-> Use this object in your program:
+       let person = { name: "Ravi", age: 25, city: "Mumbai", job: "Developer" };
+-> Read a property name from the user.
+-> Use the "in" operator to check whether the property exists.
+-> If it exists, print its value using bracket notation (person[key]). Otherwise print a "not found" message.
+
+Sample input 1 : Input property name : city
+Sample output 1 : city : Mumbai
+
+Sample input 2 : Input property name : salary
+Sample output 2 : Property salary not found
+
+
+--------------------------------------------------------------
+Q3. Write a program in JavaScript to update existing properties and add a new property to an object.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let product = { name: "Pen", price: 10, stock: 50 };
+-> Print the object properties under the heading "Before :" using for...in.
+-> Read a new price, a new stock value and a category.
+-> Update price and stock, and add a new property category.
+-> Print the object properties under the heading "After :" using for...in.
+
+Sample input :
+Input new price : 12
+Input new stock : 40
+Input category : Stationery
+
+Sample output :
+Before :
+name : Pen
+price : 10
+stock : 50
+After :
+name : Pen
+price : 12
+stock : 40
+category : Stationery
+
+
+--------------------------------------------------------------
+Q4. Write a program in JavaScript to delete a property from an object.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let user = { name: "Asha", age: 20, city: "Pune", email: "asha@mail.com" };
+-> Read the name of the property to delete.
+-> Use the "in" operator to check whether it exists. If it exists, delete it using the delete operator and print "Property <name> deleted", then print the remaining properties using for...in.
+-> If it does not exist, print "Property <name> not found".
+
+Sample input 1 : Input property to delete : city
+Sample output 1 :
+Property city deleted
+Remaining properties :
+name : Asha
+age : 20
+email : asha@mail.com
+
+Sample input 2 : Input property to delete : phone
+Sample output 2 : Property phone not found
+
+
+--------------------------------------------------------------
+Q5. Write a program in JavaScript to add calculated properties (area and perimeter) to a rectangle object.
+--------------------------------------------------------------
+-> Read the length and width of a rectangle.
+-> Create an object rectangle with the properties length and width.
+-> Add a property area (length x width) and a property perimeter (2 x (length + width)), calculated from the existing properties.
+-> Print all the properties using for...in.
+
+Sample input :
+Input length : 10
+Input width : 5
+
+Sample output :
+length : 10
+width : 5
+area : 50
+perimeter : 30
+
+
+--------------------------------------------------------------
+Q6. Write a program in JavaScript to prepare a result object with total, percentage and result properties.
+--------------------------------------------------------------
+-> Read the marks of maths, science and english.
+-> Create an object marks with the three properties.
+-> Add the properties total, percentage (total / 3) and result ("Pass" if percentage is 40 or more, otherwise "Fail").
+-> Print all the properties using for...in.
+
+Sample input :
+Input maths : 80
+Input science : 90
+Input english : 70
+
+Sample output :
+maths : 80
+science : 90
+english : 70
+total : 240
+percentage : 80
+result : Pass
+
+
+##############################################################
+PART 2: LOOPING AND WORKING WITH WHOLE OBJECTS
+##############################################################
+
+--------------------------------------------------------------
+Q7. Write a program in JavaScript to print all keys and values of an object using for...in.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let car = { brand: "Honda", model: "City", year: 2022, color: "White" };
+-> Using a for...in loop, print every key and its value in the format "<key> : <value>".
+-> After the loop, print the type of the value of year using typeof.
+
+Sample input : (no input)
+
+Sample output :
+brand : Honda
+model : City
+year : 2022
+color : White
+Type of year : number
+
+
+--------------------------------------------------------------
+Q8. Write a program in JavaScript to count the properties of an object and add its numeric values.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let record = { name: "Asha", maths: 80, science: 90, english: 70 };
+-> Using for...in, count the total number of properties.
+-> In the same loop, use typeof to count the properties whose value is a number and to add those numeric values.
+-> Print the three results.
+
+Sample input : (no input)
+
+Sample output :
+Total properties : 4
+Numeric properties : 3
+Sum of numeric values : 240
+
+
+--------------------------------------------------------------
+Q9. Write a program in JavaScript to find the highest and lowest values in an object.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let marks = { maths: 80, science: 95, english: 70, hindi: 88 };
+-> Using for...in, find the subject with the highest marks, the subject with the lowest marks, and the total of all marks.
+-> Print the results.
+
+Sample input : (no input)
+
+Sample output :
+Highest : science (95)
+Lowest : english (70)
+Total : 333
+
+
+--------------------------------------------------------------
+Q10. Write a program in JavaScript to copy an object using a loop and change the copy without changing the original.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let original = { name: "Asha", age: 20, city: "Pune" };
+-> Create an empty object called copy. Using for...in, copy every property from original into copy.
+-> Change the city of copy to "Mumbai".
+-> Print both objects using for...in under the headings "Original :" and "Copy :".
+
+Sample input : (no input)
+
+Sample output :
+Original :
+name : Asha
+age : 20
+city : Pune
+Copy :
+name : Asha
+age : 20
+city : Mumbai
+
+
+--------------------------------------------------------------
+Q11. Write a program in JavaScript to merge two objects where the second object overrides the first.
+--------------------------------------------------------------
+-> Use these objects in your program:
+       let defaultSettings = { theme: "light", fontSize: 14, language: "en" };
+       let userSettings = { theme: "dark", fontSize: 16 };
+-> Create an empty object called settings. Using for...in, copy all properties of defaultSettings into it, then copy all properties of userSettings into it (so the user values replace the default values).
+-> Print the final settings using for...in.
+
+Sample input : (no input)
+
+Sample output :
+theme : dark
+fontSize : 16
+language : en
+
+
+--------------------------------------------------------------
+Q12. Write a program in JavaScript to create a new object by swapping the keys and values of an object.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let codes = { a: "apple", b: "banana", c: "cherry" };
+-> Create an empty object called swapped. Using for...in, store each value of codes as a key of swapped, with the old key as its value (use bracket notation).
+-> Print swapped using for...in.
+
+Sample input : (no input)
+
+Sample output :
+apple : a
+banana : b
+cherry : c
+
+
+--------------------------------------------------------------
+Q13. Write a program in JavaScript to check whether two objects are equal.
+--------------------------------------------------------------
+-> Read the name and age for the first object, and the name and age for the second object. Create two objects with the properties name and age.
+-> Two objects are equal only if they have the same number of properties and every property of the first object has the same value in the second object.
+-> Use for...in loops to count the properties and to compare the values.
+-> Print whether the objects are equal or not.
+
+Sample input 1 :
+Input first object (name age) : Asha 20
+Input second object (name age) : Asha 20
+
+Sample output 1 : The objects are equal
+
+Sample input 2 :
+Input first object (name age) : Asha 20
+Input second object (name age) : Asha 21
+
+Sample output 2 : The objects are not equal
+
+
+##############################################################
+PART 3: NESTED OBJECTS AND ARRAYS INSIDE OBJECTS
+##############################################################
+
+--------------------------------------------------------------
+Q14. Write a program in JavaScript to create and display a nested employee object.
+--------------------------------------------------------------
+-> Read the name, city, state, pincode, basic salary and HRA of an employee.
+-> Create an object employee with the properties: name, address (an object with city, state and pincode) and salary (an object with basic and hra).
+-> Print the name and the address details using dot notation.
+-> Calculate and print the total salary (basic + hra).
+
+Sample input :
+Input name : Asha
+Input city : Pune
+Input state : Maharashtra
+Input pincode : 411001
+Input basic salary : 30000
+Input HRA : 6000
+
+Sample output :
+Name : Asha
+City : Pune
+State : Maharashtra
+Pincode : 411001
+Total salary : 36000
+
+
+--------------------------------------------------------------
+Q15. Write a program in JavaScript to update, add and delete properties inside a nested object.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let company = {
+         name: "TechCorp",
+         location: { city: "Pune", country: "India" },
+         ceo: { name: "Ravi", age: 45 }
+       };
+-> Read a new age for the CEO and update company.ceo.age.
+-> Read a pincode and add it as company.location.pincode.
+-> Delete company.location.country.
+-> Print the company details and then use the "in" operator to print whether country still exists in location.
+
+Sample input :
+Input new CEO age : 46
+Input pincode : 411001
+
+Sample output :
+Company : TechCorp
+City : Pune
+Pincode : 411001
+CEO : Ravi (46)
+Country exists : No
+
+
+--------------------------------------------------------------
+Q16. Write a program in JavaScript to work with an array stored inside an object.
+--------------------------------------------------------------
+-> Create an object student = { name: "Asha", marks: [] }.
+-> Read 3 marks and store them in student.marks using index.
+-> Using a loop over student.marks, find the total, the average and the highest mark.
+-> Print the results.
+
+Sample input : Input 3 marks : 70 80 90
+
+Sample output :
+Name : Asha
+Total : 240
+Average : 80
+Highest : 90
+
+
+--------------------------------------------------------------
+Q17. Write a program in JavaScript to add a new subject to the array inside a student object.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let student = { name: "Ravi", subjects: ["Maths", "Science", "English"] };
+-> Read a new subject and add it at the end of student.subjects using index (do not use push()).
+-> Using a loop, print all the subjects separated by ", " (no comma after the last one).
+-> Print the total number of subjects using student.subjects.length.
+
+Sample input : Input new subject : History
+
+Sample output :
+Subjects : Maths, Science, English, History
+Total subjects : 4
+
+
+--------------------------------------------------------------
+Q18. Write a program in JavaScript to read an object whose properties are also objects using for...in.
+--------------------------------------------------------------
+-> Use this object in your program:
+       let employees = {
+         101: { name: "Asha", salary: 50000 },
+         102: { name: "Ravi", salary: 40000 },
+         103: { name: "Meena", salary: 60000 }
+       };
+-> Using for...in, print the id, name and salary of every employee.
+-> In the same loop, add up the salaries.
+-> Print the total salary.
+
+Sample input : (no input)
+
+Sample output :
+101 : Asha (50000)
+102 : Ravi (40000)
+103 : Meena (60000)
+Total salary : 150000
+
+
+##############################################################
+PART 4: ARRAY OF OBJECTS (WITHOUT ARRAY METHODS)
+##############################################################
+
+--------------------------------------------------------------
+Q19. Write a program in JavaScript to store the details of 3 students in an array of objects and display them.
+--------------------------------------------------------------
+-> Create an empty array called students.
+-> Using a loop, read the name and marks of 3 students. For each one, create an object { name, marks } and store it in the array by index.
+-> Using another loop, print all the students.
+
+Sample input :
+Input student 1 (name marks) : Asha 78
+Input student 2 (name marks) : Ravi 92
+Input student 3 (name marks) : Meena 85
+
+Sample output :
+Student 1 : Asha (78)
+Student 2 : Ravi (92)
+Student 3 : Meena (85)
+
+
+--------------------------------------------------------------
+Q20. Write a program in JavaScript to find the topper and the average marks from an array of objects.
+--------------------------------------------------------------
+-> Read the name and marks of 4 students and store them as objects in an array.
+-> Using a loop, find the student with the highest marks and the average marks of all students.
+-> Print both results.
+
+Sample input :
+Input student 1 (name marks) : Asha 78
+Input student 2 (name marks) : Ravi 92
+Input student 3 (name marks) : Meena 85
+Input student 4 (name marks) : Kiran 60
+
+Sample output :
+Topper : Ravi (92)
+Average marks : 78.75
+
+
+--------------------------------------------------------------
+Q21. Write a program in JavaScript to search a product by its id in an array of objects.
+--------------------------------------------------------------
+-> Use this array in your program:
+       let products = [
+         { id: 1, name: "Pen", price: 10 },
+         { id: 2, name: "Notebook", price: 50 },
+         { id: 3, name: "Bag", price: 500 }
+       ];
+-> Read a product id.
+-> Using a loop (do not use find()), look for the product with that id. Print its name and price.
+-> If no product matches, print "Product not found".
+
+Sample input 1 : Input product id : 2
+Sample output 1 : Notebook costs Rs 50
+
+Sample input 2 : Input product id : 9
+Sample output 2 : Product not found
+
+
+--------------------------------------------------------------
+Q22. Write a program in JavaScript to list the students who passed from an array of objects.
+--------------------------------------------------------------
+-> Use this array in your program:
+       let students = [
+         { name: "Asha", marks: 78 },
+         { name: "Ravi", marks: 35 },
+         { name: "Meena", marks: 92 },
+         { name: "Kiran", marks: 60 },
+         { name: "Divya", marks: 45 }
+       ];
+-> Using a loop (do not use filter()), print the students who scored 40 or more.
+-> Count and print the number of students who failed.
+
+Sample input : (no input)
+
+Sample output :
+Passed :
+Asha - 78
+Meena - 92
+Kiran - 60
+Divya - 45
+Failed count : 1
+
+
+--------------------------------------------------------------
+Q23. Write a program in JavaScript to update a property of selected objects in an array.
+--------------------------------------------------------------
+-> Use this array in your program:
+       let products = [
+         { name: "Pen", price: 10 },
+         { name: "Bag", price: 500 },
+         { name: "Shoes", price: 1500 },
+         { name: "Cap", price: 200 }
+       ];
+-> Using a loop, increase the price by 10% (price x 110 / 100) of every product whose price is more than 100.
+-> Print all the products with their final prices.
+
+Sample input : (no input)
+
+Sample output :
+Pen : 10
+Bag : 550
+Shoes : 1650
+Cap : 220
+
+
+--------------------------------------------------------------
+Q24. Write a program in JavaScript to sort an array of objects by a property using bubble sort.
+--------------------------------------------------------------
+-> Use this array in your program:
+       let students = [
+         { name: "Asha", marks: 78 },
+         { name: "Ravi", marks: 92 },
+         { name: "Meena", marks: 85 },
+         { name: "Kiran", marks: 60 }
+       ];
+-> Using nested loops, sort the array in descending order of marks. Swap whole objects using a temporary variable (do not use sort()).
+-> Print the rank list.
+
+Sample input : (no input)
+
+Sample output :
+Rank 1 : Ravi (92)
+Rank 2 : Meena (85)
+Rank 3 : Asha (78)
+Rank 4 : Kiran (60)
+
+
+--------------------------------------------------------------
+Q25. Write a program in JavaScript to count the number of people in each city using an object as a counter.
+--------------------------------------------------------------
+-> Use this array in your program:
+       let people = [
+         { name: "Asha", city: "Pune" },
+         { name: "Ravi", city: "Mumbai" },
+         { name: "Meena", city: "Pune" },
+         { name: "Kiran", city: "Delhi" },
+         { name: "Divya", city: "Mumbai" },
+         { name: "Rohan", city: "Pune" }
+       ];
+-> Create an empty object called cityCount.
+-> Using a loop, for every person: if their city is already a property of cityCount (use the "in" operator), add 1 to it; otherwise create the property with value 1 (use bracket notation).
+-> Print the counts using for...in.
+
+Sample input : (no input)
+
+Sample output :
+Pune : 3
+Mumbai : 2
+Delhi : 1
+
+
+##############################################################
+PART 5: SCENARIO-BASED QUESTIONS
+##############################################################
+
+--------------------------------------------------------------
+Q26. Write a program in JavaScript to deposit and withdraw money using a bank account object.
+--------------------------------------------------------------
+-> Create an object account = { holder: "Asha", accountNo: 1001, balance: 5000 }.
+-> Read a deposit amount and add it to account.balance. Print the balance.
+-> Read a withdraw amount. If it is more than the balance, print "Insufficient balance" and do not change the balance. Otherwise subtract it.
+-> Print the final balance.
+
+Sample input 1 :
+Input deposit amount : 2000
+Input withdraw amount : 1500
+
+Sample output 1 :
+Balance after deposit : 7000
+Balance after withdrawal : 5500
+
+Sample input 2 :
+Input deposit amount : 2000
+Input withdraw amount : 9000
+
+Sample output 2 :
+Balance after deposit : 7000
+Insufficient balance
+Balance after withdrawal : 7000
+
+
+--------------------------------------------------------------
+Q27. Write a program in JavaScript to sell items from a shop inventory object.
+--------------------------------------------------------------
+-> Use this object in your program (item name as key, stock as value):
+       let inventory = { apple: 50, banana: 30, mango: 20 };
+-> Read the item name and the quantity to sell.
+-> If the item is not in the inventory (use "in"), print "Item not available".
+-> If the quantity is more than the stock, print "Not enough stock".
+-> Otherwise reduce the stock, print "Sale successful" and then print the updated inventory using for...in.
+
+Sample input 1 :
+Input item : banana
+Input quantity : 10
+
+Sample output 1 :
+Sale successful
+apple : 50
+banana : 20
+mango : 20
+
+Sample input 2 :
+Input item : grapes
+Input quantity : 5
+
+Sample output 2 : Item not available
+
+Sample input 3 :
+Input item : banana
+Input quantity : 40
+
+Sample output 3 : Not enough stock
+
+
+--------------------------------------------------------------
+Q28. Write a program in JavaScript to count how many times each word is entered using an object.
+--------------------------------------------------------------
+-> Read 6 words one by one.
+-> Use an object called wordCount. For each word, if it is already a property use "in" to check and increase its count, otherwise create it with value 1.
+-> Print every word and its count using for...in, in the order the words first appeared.
+
+Sample input : Input 6 words : apple banana apple cherry banana apple
+
+Sample output :
+apple : 3
+banana : 2
+cherry : 1
+
+
+--------------------------------------------------------------
+Q29. Write a program in JavaScript to issue a book in a library using an array of objects.
+--------------------------------------------------------------
+-> Use this array in your program:
+       let books = [
+         { title: "Atomic Habits", isIssued: false },
+         { title: "Deep Work", isIssued: true },
+         { title: "Ikigai", isIssued: false }
+       ];
+-> Read the title of the book to issue.
+-> Using a loop, find the book. If it is not found, print "Book not found". If it is already issued, print "<title> is already issued". Otherwise set isIssued to true and print "<title> issued successfully".
+-> After that, print every book with its status ("Available" or "Issued").
+
+Sample input 1 : Input book title : Ikigai
+Sample output 1 :
+Ikigai issued successfully
+Atomic Habits : Available
+Deep Work : Issued
+Ikigai : Issued
+
+Sample input 2 : Input book title : Deep Work
+Sample output 2 :
+Deep Work is already issued
+Atomic Habits : Available
+Deep Work : Issued
+Ikigai : Available
+
+
+--------------------------------------------------------------
+Q30. Write a program in JavaScript to prepare a shopping cart bill using an array of objects.
+--------------------------------------------------------------
+-> Read the item name, price and quantity of 3 items and store each as an object { item, price, qty } in an array.
+-> Using a loop, add a new property total (price x qty) to every object.
+-> Find the grand total. If the grand total is more than 2000, the discount is 10% of the grand total, otherwise 0.
+-> Print each item total, the grand total, the discount and the amount payable.
+
+Sample input :
+Input item 1 (name price quantity) : Shirt 500 2
+Input item 2 (name price quantity) : Shoes 1500 1
+Input item 3 (name price quantity) : Socks 100 3
+
+Sample output :
+Shirt : 1000
+Shoes : 1500
+Socks : 300
+Grand total : 2800
+Discount : 280
+Amount payable : 2520
+
+
+--------------------------------------------------------------
+Q31. Write a program in JavaScript to prepare a department-wise salary report using an array of objects.
+--------------------------------------------------------------
+-> Use this array in your program:
+       let employees = [
+         { name: "Asha", dept: "IT", salary: 50000 },
+         { name: "Ravi", dept: "HR", salary: 40000 },
+         { name: "Meena", dept: "IT", salary: 60000 },
+         { name: "Kiran", dept: "Sales", salary: 35000 },
+         { name: "Divya", dept: "HR", salary: 45000 }
+       ];
+-> Create an empty object called deptTotal. Using a loop, add every employee's salary to the total of their department (create the property if it does not exist).
+-> Print the department totals using for...in.
+-> Also find and print the highest paid employee.
+
+Sample input : (no input)
+
+Sample output :
+IT : 110000
+HR : 85000
+Sales : 35000
+Highest paid : Meena (60000)
+

@@ -752,7 +752,7 @@ Que 57 : Write C program to given pattern.
 
 ====================================================================
 Que 58 : Write C program to given pattern.
-	    1
+	         1
          1     1
       1     2     1 
    1     3     3     1
