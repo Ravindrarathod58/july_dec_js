@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.corousel-container {
+  height: 70vh;
+  box-shadow: 0 0 4px gray;
+  width: 90%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(https://trekkingwebsitetest.netlify.app/images/image1.png);
+  background-size: cover;
+  background-position: center;
+}
+.corousel-container button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgba(0, 0, 0, 0.147);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+.corousel-container h1 {
+  background-color: rgba(0, 0, 0, 0.266);
+  font-size: 4rem;
+  width: 45%;
+  text-align: center;
+  height: 200px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

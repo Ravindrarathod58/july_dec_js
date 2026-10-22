@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+      body {
+        height: 100vh;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- click action 1 -->
+    <!-- <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li id="li">item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul> -->
+
+    <!-- <script>
+      const body = document.body;
+      const li = document.getElementById("li");
+      body.addEventListener("click", (e) => {
+        console.log(e.target);
+      });
+      li.addEventListener("click", (e) => {
+        e.stopPropagation();
+        console.log("Li is clicked");
+      });
+    </script> -->
+
+    <script>
+      //   try {
+      //     // statement
+      //     throw new ReferenceError("");
+      //   } catch (e) {
+      //     console.error(e);
+      //   } finally {
+      //     console.log("Finally block");
+      //   }
+
+      function Hello() {
+        console.log("Hello");
+      }
+
+      //   setTimeout(Hello, 5000); // timer is always MS
+      const id = setInterval(Hello, 2000);
+
+      setTimeout(() => {
+        clearInterval(id);
+        console.log("Interval cleared");
+      }, 10000);
+      console.log("Synchrounous execution");
+    </script>
+  </body>
+</html>
