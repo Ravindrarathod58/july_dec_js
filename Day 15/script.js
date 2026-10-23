@@ -98,3 +98,5 @@ studentForm.addEventListener("submit", (e) => {
 });
 
 getStudents();
+
+// 2026-10-23T10:05:09.297+05:30[0;39m [33m WARN[0;39m [35m28432[0;39m [2m--- [TestApplication] [nio-8080-exec-2] [0;39m[36m.w.s.m.s.DefaultHandlerExceptionResolver[0;39m [2m:[0;39m Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)]
