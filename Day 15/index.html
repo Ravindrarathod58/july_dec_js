@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 
+        connecting JS with spring boot REST apis
+        Port : 8080
+        Port : 5173 // React
+
+        Fetch API
+            it is a function in JS which allows to send and receive the network request
+            and get responce back from any origins(URLS)
+
+            fetch API returns the promises
+                resolved
+                rejected
+            
+                fetch(URL) -> promise
+                -> promise chain
+                using then() we can chain the multiple promise
+                then((res)=> {
+                    return res.json()
+                })  => returns new promise
+
+                then((data)=> {
+                
+                    console.log(data)
+                })
+                    then((res)=>res.json())
+
+                    async await
+    -->
+    <form id="studentForm">
+      <h2>Add Student</h2>
+      <input type="text" placeholder="student name" id="s_name" />
+      <input type="email" placeholder="student email" id="s_email" />
+      <input type="text" placeholder="student course" id="s_course" />
+      <input type="submit" value="save student" />
+    </form>
+
+    <table border="1" id="studentlist"></table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

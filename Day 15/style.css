@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#studentlist {
+  width: 100%;
+  margin: 20px;
+  /* min-height: 400px; */
+  /* border: 1px solid; */
+  border-collapse: collapse;
+}
+
+#studentForm {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 300px;
+  border: 1px solid;
+  align-items: center;
+  justify-content: space-around;
+}
+input {
+  height: 40px;
+  width: 80%;
+}
