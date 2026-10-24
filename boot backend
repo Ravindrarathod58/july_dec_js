@@ -1,0 +1,136 @@
+package com.test.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Student {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer student_id;
+	private String student_name;
+	private String email;
+	private String course;
+}
+
+
+
+
+
+
+package com.test.repo;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.test.entity.Student;
+
+public interface StudentRepository extends JpaRepository<Student, Integer> {
+//	Optional<List<Student>> getAllStudents();
+}
+
+
+
+
+
+
+package com.test.controller;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.test.TestApplication;
+import com.test.entity.Student;
+import com.test.repo.StudentRepository;
+
+@RequestMapping("/api")
+@RestController
+@CrossOrigin(origins = "*")
+public class StudentsController {
+
+    private final TestApplication testApplication;
+	
+	@Autowired
+	StudentRepository studentRepository;
+
+    StudentsController(TestApplication testApplication) {
+        this.testApplication = testApplication;
+    }
+
+	@GetMapping("/students")
+	public ResponseEntity getStudents(){
+	List<Student> studentList = studentRepository.findAll();
+		return ResponseEntity.ok(studentList);	
+	}
+	
+	@PostMapping("/add")
+	public Student saveStudent(@RequestBody Student student){
+		return studentRepository.save(student);	
+	}	
+//	
+	
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity deleteStudent(@PathVariable int id){
+		
+		Optional<Student> st = studentRepository.findById(id);
+		if(!st.isPresent()) {
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+		}
+		
+		studentRepository.deleteById(id);
+		Map<String, String> respMap = new HashMap<String, String>();
+		respMap.put("Message", "Record successfully deleted");
+		
+		
+		return ResponseEntity.ok(respMap);
+		
+	}
+//	
+	
+	@PostMapping("/update/{id}")
+	public ResponseEntity updateStudent(@PathVariable Integer id, @RequestBody Student student){
+		
+		if(studentRepository.existsById(id)) {
+			Optional<Student> stu = studentRepository.findById(id);
+			Student s = stu.get();
+			s.setStudent_name(student.getStudent_name());
+			s.setEmail(student.getEmail());
+			s.setCourse(student.getCourse());
+			studentRepository.save(s);
+			
+			Map<String, String> respMap = new HashMap<String, String>();
+			respMap.put("Message", "Student data updated");
+			
+			
+			return ResponseEntity.ok(respMap);
+		}
+		  return ResponseEntity.notFound().build();
+		
+	}
+ }
