@@ -37,14 +37,40 @@
     -->
     <form id="studentForm">
       <h2>Add Student</h2>
+      <input type="hidden" id="student_id" />
       <input type="text" placeholder="student name" id="s_name" />
       <input type="email" placeholder="student email" id="s_email" />
       <input type="text" placeholder="student course" id="s_course" />
       <input type="submit" value="save student" />
     </form>
+    <div class="search-bar">
+      <input type="text" id="searchQuery" />
+      <button onclick="searchStudent()">Search</button>
+      <p id="javaCount">Java</p>
+      <p id="pythonCount">Python</p>
+    </div>
 
     <table border="1" id="studentlist"></table>
 
+    <form id="updateForm">
+      <button type="button" onclick="close()">*</button>
+      <h2>Update Student</h2>
+      <input type="text" placeholder="student name" id="s_name_u" />
+      <input type="email" placeholder="student email" id="s_email_u" />
+      <input type="text" placeholder="student course" id="s_course_u" />
+      <input type="submit" value="save student" />
+    </form>
+
+    <div class="deleteModal" id="deleteModal">
+      <button onclick="closeModal()">Close</button>
+
+      <h1>Are you sure ?</h1>
+      <input type="hidden" id="del_id" />
+      <div class="btn">
+        <button onclick="deleteStudent()">OK</button>
+        <button onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

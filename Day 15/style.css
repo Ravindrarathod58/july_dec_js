@@ -22,7 +22,44 @@
   align-items: center;
   justify-content: space-around;
 }
+
+#updateForm {
+  margin: 40px;
+  display: none;
+  flex-direction: column;
+  width: 40%;
+  height: 300px;
+  border: 1px solid;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  background-color: white;
+}
 input {
   height: 40px;
   width: 80%;
+}
+
+#deleteModal {
+  margin: 40px;
+  display: none;
+  flex-direction: column;
+  width: 40%;
+  height: 300px;
+  border: 1px solid;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  background-color: white;
+}
+
+.search-bar {
+  margin-left: 3%;
+}
+.search-bar input {
+  width: 500px;
 }
